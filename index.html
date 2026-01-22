@@ -3,55 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics Notes - Test Page</title>
+    <title>JEE Physics | Personal Notes</title>
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; background: #f4f4f4; }
-        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; }
-        h2 { color: #e67e22; }
-        .concept-section { margin-bottom: 30px; border-left: 4px solid #3498db; padding-left: 15px; }
-        img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; margin: 15px 0; }
-        .math-box { background: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        :root { --primary: #2c3e50; --secondary: #e67e22; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: var(--primary); border-bottom: 3px solid var(--secondary); padding-bottom: 10px; }
+        .syllabus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        @media (max-width: 768px) { .syllabus-grid { grid-template-columns: 1fr; } }
+        .class-section h2 { background: var(--primary); color: white; padding: 10px 15px; border-radius: 5px; font-size: 1.2rem; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 8px 0; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+        a { text-decoration: none; color: #3498db; font-weight: 500; transition: color 0.2s; }
+        a:hover { color: var(--secondary); }
+        .footer { text-align: center; margin-top: 50px; font-size: 0.9rem; color: #7f8c8d; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Chapter Test: Projectile Motion</h1>
-
-    <div class="concept-section">
-        <h2>What: Definition</h2>
-        <p>A projectile is an object thrown into space upon which the only acting force is gravity. The path followed by the projectile is called its <strong>trajectory</strong>.</p>
+    <h1>JEE Physics: Comprehensive Notes</h1>
+    <p style="text-align: center;">Conceptual definitions supported by mathematical derivations.</p>
+<section class="description">
+    <h2>About These Notes</h2>
+    <p>
+        These notes are designed specifically for <strong>JEE Main & Advanced</strong> aspirants. 
+        My approach follows a strict scientific hierarchy: first, we define the <strong>What</strong> 
+        (the physical concept), and then we explore the <strong>How</strong> (the mathematical application).
+    </p>
+    
+    <div class="features">
+        <div class="feature-item">
+            <strong>Strict Definitions:</strong> Every physical law is operationally defined before use.
+        </div>
+        <div class="feature-item">
+            <strong>Derivation Focused:</strong> We don't just memorize formulas; we derive them using calculus and vectors.
+        </div>
+        <div class="feature-item">
+            <strong>Modular Learning:</strong> Each chapter is a self-contained module with its own diagrams and assets.
+        </div>
     </div>
+</section>
 
-    <div class="concept-section">
-        <h2>Visual Representation</h2>
-        <p><em>Note: Ensure your image file (e.g., 'projectile.jpg') is in the same folder as this HTML file.</em></p>
-        <img src="projectile.jpg" alt="Projectile Motion Diagram Placeholder">
-    </div>
+<style>
+    .description { margin-bottom: 40px; border-left: 5px solid var(--secondary); padding-left: 20px; background: #f9f9f9; padding: 20px; border-radius: 0 8px 8px 0; }
+    .description h2 { margin-top: 0; color: var(--primary); }
+    .features { display: flex; gap: 15px; margin-top: 20px; font-size: 0.9rem; }
+    .feature-item { flex: 1; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 3px solid var(--primary); }
+    @media (max-width: 768px) { .features { flex-direction: column; } }
+</style>
+    <div class="syllabus-grid">
+        <div class="class-section">
+            <h2>Class 11 Syllabus</h2>
+            <ul id="list-11">
+                </ul>
+        </div>
 
-    <div class="concept-section">
-        <h2>How: The Mathematical Application</h2>
-        <p>We resolve the initial velocity $u$ into two rectangular components:</p>
-        <ul>
-            <li>Horizontal component: \( u_x = u \cos \theta \)</li>
-            <li>Vertical component: \( u_y = u \sin \theta \)</li>
-        </ul>
-
-        <p>The time of flight ($T$) is derived by supporting the "What" with vertical kinematics:</p>
-        <div class="math-box">
-            \[ T = \frac{2u \sin \theta}{g} \]
+        <div class="class-section">
+            <h2>Class 12 Syllabus</h2>
+            <ul id="list-12">
+                </ul>
         </div>
     </div>
 
-    <div style="margin-top: 40px; font-size: 0.8em; color: #7f8c8d;">
-        <p>Built for GitHub Pages Test | 2026 Physics Resources</p>
+    <div class="footer">
+        <p>By Hitendra K K</p>
     </div>
 </div>
+
+<script>
+    // These matches your .txt files exactly
+    const class11 = [
+        "physical-world", "mathematical-tools", "units-and-dimensions", "measurments-and-errors",
+        "motion-in-1-d", "motion-in-2-d", "laws-of-motion", "friction", "circular-motion",
+        "work-power-energy", "system-of-particles", "rotational-mechanics", "oscillations",
+        "elasticity", "fluid-mechanics", "thermal-properties", "calorimetry", "heat-transfer",
+        "gaseous-state", "thermodynamics", "ktg", "string-waves", "sound-waves", "gravitation"
+    ];
+
+    const class12 = [
+        "electrostatics", "gauss-law", "capacitance", "current-electricity",
+        "magnetic-effects-of-current", "magnetism-and-matter", "electromagnetic-induction",
+        "alternating-current", "electromagnetic-waves", "geometrical-optics",
+        "optical-instruments", "wave-optics", "dual-nature-of-matter", "atoms", "nuclei", "semiconductors"
+    ];
+
+    function populateList(id, chapters, pathPrefix) {
+        const ul = document.getElementById(id);
+        chapters.forEach(ch => {
+            const li = document.createElement('li');
+            const cleanName = ch.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            li.innerHTML = `<a href="${pathPrefix}/${ch}/index.html">${cleanName}</a>`;
+            ul.appendChild(li);
+        });
+    }
+
+    populateList('list-11', class11, 'class-11');
+    populateList('list-12', class12, 'class-12');
+</script>
 
 </body>
 </html>
