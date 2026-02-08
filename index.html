@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEE Physics | Personal Notes</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #e67e22;
+      --bg: #f4f7f6;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: -40px auto 40px;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .syllabus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 850px) {
+      .syllabus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .class-section h2 {
+      border-bottom: 3px solid var(--secondary);
+      padding-bottom: 8px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    li {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    li:hover {
+      transform: translateX(5px);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+      border-color: var(--secondary);
+    }
+
+    a {
+      text-decoration: none;
+      color: #34495e;
+      font-weight: 500;
+      display: block;
+      padding: 12px 15px;
+    }
+
+    a:hover {
+      color: var(--secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: #eee;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>JEE Physics Notes</h1>
+    <p>Comprehensive Theory & Derivations for Class 11 & 12</p>
+  </header>
+
+  <div class="container">
+    <div class="syllabus-grid">
+      <div class="class-section">
+        <h2>Class 11 Syllabus</h2>
+        <ul id="list-11"></ul>
+      </div>
+
+      <div class="class-section">
+        <h2>Class 12 Syllabus</h2>
+        <ul id="list-12"></ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Maintained by Hitendra K K | &copy; 2026 JEE Physics Resources</p>
+  </footer>
+
+  <script>
+    const class11 = [
+      "physical-world", "mathematical-tools", "units-and-dimensions", "measurments-and-errors",
+      "motion-in-1-d", "motion-in-2-d", "laws-of-motion", "friction", "circular-motion",
+      "work-power-energy", "system-of-particles", "rotational-mechanics", "oscillations",
+      "elasticity", "fluid-mechanics", "thermal-properties", "calorimetry", "heat-transfer",
+      "gaseous-state", "thermodynamics", "ktg", "string-waves", "sound-waves", "gravitation"
+    ];
+
+    const class12 = [
+      "electrostatics", "gauss-law", "capacitance", "current-electricity",
+      "magnetic-effects-of-current", "magnetism-and-matter", "electromagnetic-induction",
+      "alternating-current", "electromagnetic-waves", "geometrical-optics",
+      "optical-instruments", "wave-optics", "dual-nature-of-matter", "atoms", "nuclei", "semiconductors"
+    ];
+
+    function populateList(id, chapters, pathPrefix) {
+      const ul = document.getElementById(id);
+      chapters.forEach(ch => {
+        const li = document.createElement('li');
+        const cleanName = ch.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        li.innerHTML = `<a href="${pathPrefix}/${ch}/index.html">${cleanName}</a>`;
+        ul.appendChild(li);
+      });
+    }
+
+    populateList('list-11', class11, 'class-11');
+    populateList('list-12', class12, 'class-12');
+  </script>
+
+</body>
+
+</html>
