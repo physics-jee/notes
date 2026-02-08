@@ -2,17 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | motion-in-2-d</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in Two Dimensions | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #c0392b; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: motion-in-2-d</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for motion-in-2-d will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Motion in Two Dimensions</h1>
+    <p style="text-align: center;"><em>Motion where direction matters as much as magnitude.</em></p>
+
+    <section id="position-vector">
+        <h2>1. Position Vector & Plane Motion</h2>
+        <p>When motion is not restricted to a straight line, we describe position using vectors in a plane.</p>
+
+        <div class="formula-block">
+            \[
+            \vec r = x\,\hat i + y\,\hat j
+            \]
+        </div>
+
+        <div class="insightbox">
+            Motion in 2D is not “more physics” —  
+            it is the same physics, expressed vectorially.
+        </div>
+    </section>
+
+    <section id="displacement-velocity">
+        <h2>2. Displacement, Velocity & Acceleration</h2>
+        <p>All kinematic quantities in 2D are vectors.</p>
+
+        <div class="formula-block">
+            \[
+            \vec v = \frac{d\vec r}{dt}, \qquad
+            \vec a = \frac{d\vec v}{dt}
+            \]
+        </div>
+
+        <ul>
+            <li>Velocity is always tangent to the path</li>
+            <li>Acceleration need not be along velocity</li>
+        </ul>
+    </section>
+
+    <section id="component-analysis">
+        <h2>3. Component Resolution</h2>
+        <p>Any vector in a plane can be resolved into perpendicular components.</p>
+
+        <div class="formula-block">
+            \[
+            \vec v = v_x \hat i + v_y \hat j
+            \]
+        </div>
+
+        <div class="grid">
+            <div>
+                \( v_x = v \cos\theta \)
+            </div>
+            <div>
+                \( v_y = v \sin\theta \)
+            </div>
+        </div>
+
+        <div class="insightbox">
+            In kinematics, components evolve independently  
+            as long as acceleration components are independent.
+        </div>
+    </section>
+
+    <section id="projectile">
+        <h2>4. Projectile Motion</h2>
+        <p>Projectile motion is a special case of 2D motion under uniform gravity.</p>
+
+        <ul>
+            <li>Horizontal motion → constant velocity</li>
+            <li>Vertical motion → uniformly accelerated</li>
+        </ul>
+
+        <div class="formula-block">
+            Time of flight:
+            \[
+            T = \frac{2u\sin\theta}{g}
+            \]
+            Range:
+            \[
+            R = \frac{u^2\sin 2\theta}{g}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Projectile motion is simply  
+            two independent 1D motions sharing time.
+        </div>
+    </section>
+
+    <section id="relative-motion">
+        <h2>5. Relative Motion in Two Dimensions</h2>
+        <p>Motion is often analyzed relative to another moving object.</p>
+
+        <div class="formula-block">
+            \[
+            \vec v_{A/B} = \vec v_A - \vec v_B
+            \]
+        </div>
+
+        <ul>
+            <li>Essential for rain–man, river–boat, and chase problems</li>
+            <li>Reference frame choice simplifies analysis</li>
+        </ul>
+    </section>
+
+    <section id="trajectory">
+        <h2>6. Trajectory</h2>
+        <p>The <strong>trajectory</strong> is the path traced by a particle during motion.</p>
+
+        <div class="formula-block">
+            For projectile motion:
+            \[
+            y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Trajectory is a geometric consequence  
+            of time-dependent motion.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
