@@ -2,17 +2,211 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | oscillations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #e74c3c; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: oscillations</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for oscillations will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Oscillations</h1>
+    <p style="text-align: center;"><em>Motion that repeats itself in time.</em></p>
+
+    <section id="oscillatory-motion">
+        <h2>1. Oscillatory Motion</h2>
+        <p>
+            <strong>Oscillatory motion</strong> is a periodic to-and-fro motion
+            of a body about a fixed equilibrium position.
+        </p>
+
+        <ul>
+            <li>Motion repeats in time</li>
+            <li>Occurs about a stable equilibrium</li>
+        </ul>
+
+        <div class="insightbox">
+            Not all periodic motions are oscillatory,
+            but all oscillations are periodic.
+        </div>
+    </section>
+
+    <section id="shm">
+        <h2>2. Simple Harmonic Motion (SHM)</h2>
+        <p>
+            A particle executes <strong>simple harmonic motion</strong> if
+            the restoring force acting on it is directly proportional
+            to its displacement from equilibrium and directed toward it.
+        </p>
+
+        <div class="formula-block">
+            \[
+            F = -kx
+            \]
+        </div>
+
+        <p>
+            Using Newton’s second law:
+        </p>
+
+        <div class="formula-block">
+            \[
+            a = -\omega^2 x
+            \quad \text{where } \omega = \sqrt{\frac{k}{m}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            SHM is defined by the *nature of force*,
+            not by the shape of motion.
+        </div>
+    </section>
+
+    <section id="solution">
+        <h2>3. Displacement, Velocity & Acceleration</h2>
+
+        <div class="formula-block">
+            Displacement:
+            \[
+            x = A\sin(\omega t + \phi)
+            \]
+            <br><br>
+            Velocity:
+            \[
+            v = \omega\sqrt{A^2 - x^2}
+            \]
+            <br><br>
+            Acceleration:
+            \[
+            a = -\omega^2 x
+            \]
+        </div>
+
+        <ul>
+            <li>Velocity maximum at mean position</li>
+            <li>Acceleration maximum at extremes</li>
+        </ul>
+    </section>
+
+    <section id="time-period">
+        <h2>4. Time Period & Frequency</h2>
+
+        <div class="formula-block">
+            \[
+            T = \frac{2\pi}{\omega}
+            \quad\quad
+            f = \frac{1}{T}
+            \]
+        </div>
+
+        <p>
+            The time period depends only on system parameters,
+            not on amplitude (for SHM).
+        </p>
+
+        <div class="insightbox">
+            Isochronism is a defining feature of SHM.
+        </div>
+    </section>
+
+    <section id="energy">
+        <h2>5. Energy in SHM</h2>
+
+        <div class="formula-block">
+            Kinetic Energy:
+            \[
+            K = \frac{1}{2}m\omega^2(A^2 - x^2)
+            \]
+            <br><br>
+            Potential Energy:
+            \[
+            U = \frac{1}{2}m\omega^2 x^2
+            \]
+            <br><br>
+            Total Energy:
+            \[
+            E = \frac{1}{2}m\omega^2 A^2
+            \]
+        </div>
+
+        <div class="insightbox">
+            Energy continuously transforms
+            between kinetic and potential forms.
+        </div>
+    </section>
+
+    <section id="spring">
+        <h2>6. Mass–Spring System</h2>
+        <p>
+            A block attached to an ideal spring on a frictionless surface
+            executes SHM.
+        </p>
+
+        <div class="formula-block">
+            \[
+            T = 2\pi\sqrt{\frac{m}{k}}
+            \]
+        </div>
+    </section>
+
+    <section id="pendulum">
+        <h2>7. Simple Pendulum</h2>
+        <p>
+            A simple pendulum performs SHM for small angular displacements.
+        </p>
+
+        <div class="formula-block">
+            \[
+            T = 2\pi\sqrt{\frac{l}{g}}
+            \]
+        </div>
+
+        <ul>
+            <li>Valid only for small angles</li>
+            <li>Independent of mass of bob</li>
+        </ul>
+
+        <div class="insightbox">
+            Pendulum SHM arises from angular approximation:
+            \(\sin\theta \approx \theta\).
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>8. Common Mistakes</h2>
+        <ul>
+            <li>Calling all periodic motion SHM</li>
+            <li>Forgetting small-angle condition</li>
+            <li>Using SHM formulas outside validity</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
