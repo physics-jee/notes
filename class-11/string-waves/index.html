@@ -2,17 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | string-waves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waves on a String | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #ebf5fb; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: string-waves</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for string-waves will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Waves on a Stretched String</h1>
+    <p style="text-align: center;"><em>One-dimensional mechanical wave propagation.</em></p>
+
+    <section>
+        <h2>1. Mechanical Waves</h2>
+        <p>
+            A <strong>mechanical wave</strong> is a disturbance that propagates
+            through a material medium by transfer of energy, not matter.
+        </p>
+
+        <div class="insightbox">
+            Particles oscillate locally;  
+            the wave travels globally.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Transverse Waves on a String</h2>
+        <p>
+            Waves on a stretched string are <strong>transverse</strong>:
+            particle displacement is perpendicular to direction of propagation.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Wave Speed on a String</h2>
+
+        <div class="formula-block">
+            \[
+            v = \sqrt{\frac{T}{\mu}}
+            \]
+        </div>
+
+        <ul>
+            <li>\(T\): tension in the string</li>
+            <li>\(\mu\): mass per unit length</li>
+        </ul>
+
+        <div class="insightbox">
+            Wave speed depends on medium properties,
+            not on how the wave is produced.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Wave Equation</h2>
+
+        <div class="formula-block">
+            \[
+            y(x,t) = A\sin(kx - \omega t)
+            \]
+        </div>
+
+        <ul>
+            <li>\(k = \frac{2\pi}{\lambda}\)</li>
+            <li>\(\omega = 2\pi f\)</li>
+            <li>\(v = \frac{\omega}{k}\)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Energy in a String Wave</h2>
+        <p>
+            Energy propagates along the string
+            through oscillatory motion of particles.
+        </p>
+
+        <div class="insightbox">
+            Higher amplitude → higher energy transport.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Reflection of Waves</h2>
+        <ul>
+            <li>Fixed end → phase reversal</li>
+            <li>Free end → no phase reversal</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Standing Waves on a String</h2>
+
+        <div class="formula-block">
+            \[
+            \lambda_n = \frac{2L}{n}
+            \quad (n = 1,2,3,\dots)
+            \]
+        </div>
+
+        <div class="formula-block">
+            \[
+            f_n = \frac{nv}{2L}
+            \]
+        </div>
+
+        <ul>
+            <li>Nodes → zero displacement</li>
+            <li>Antinodes → maximum displacement</li>
+        </ul>
+
+        <div class="insightbox">
+            Standing waves arise from
+            superposition of identical waves.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
