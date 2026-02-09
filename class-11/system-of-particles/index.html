@@ -2,17 +2,208 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | system-of-particles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #27ae60; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #e9f7ef; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: system-of-particles</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for system-of-particles will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>System of Particles</h1>
+    <p style="text-align: center;"><em>Collective motion, momentum, and interactions.</em></p>
+
+    <section id="system">
+        <h2>1. What Is a System of Particles?</h2>
+        <p>
+            A <strong>system of particles</strong> is a collection of two or more particles
+            considered together for analysis.
+        </p>
+
+        <ul>
+            <li>Internal forces → act between particles of the system</li>
+            <li>External forces → act on the system from outside</li>
+        </ul>
+
+        <div class="insightbox">
+            Internal forces cannot change the total momentum of a system.
+        </div>
+    </section>
+
+    <section id="com">
+        <h2>2. Centre of Mass</h2>
+        <p>
+            The <strong>centre of mass (COM)</strong> is the point that moves as if
+            the entire mass of the system were concentrated there.
+        </p>
+
+        <div class="formula-block">
+            For discrete particles:
+            \[
+            \vec R = \frac{\sum m_i \vec r_i}{\sum m_i}
+            \]
+        </div>
+
+        <div class="insightbox">
+            The centre of mass is a mathematical construct,
+            not necessarily a physical point.
+        </div>
+    </section>
+
+    <section id="com-motion">
+        <h2>3. Motion of the Centre of Mass</h2>
+        <p>
+            The acceleration of the centre of mass depends only on external forces.
+        </p>
+
+        <div class="formula-block">
+            \[
+            M\vec a_{\text{CM}} = \vec F_{\text{external}}
+            \]
+        </div>
+
+        <ul>
+            <li>Internal forces cancel in pairs</li>
+            <li>COM follows Newton’s second law</li>
+        </ul>
+
+        <div class="insightbox">
+            A system behaves like a single particle
+            when viewed from the COM perspective.
+        </div>
+    </section>
+
+    <section id="momentum">
+        <h2>4. Linear Momentum of a System</h2>
+        <p>
+            Total momentum of a system is the vector sum of momenta of all particles.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \vec P = \sum m_i \vec v_i = M \vec v_{\text{CM}}
+            \]
+        </div>
+    </section>
+
+    <section id="conservation">
+        <h2>5. Conservation of Linear Momentum</h2>
+        <p>
+            If the net external force on a system is zero,
+            total linear momentum remains constant.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \vec P_{\text{initial}} = \vec P_{\text{final}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Momentum conservation is more fundamental
+            than energy conservation.
+        </div>
+    </section>
+
+    <section id="collisions">
+        <h2>6. Collisions</h2>
+        <p>
+            A <strong>collision</strong> is a short-duration interaction
+            involving large internal forces.
+        </p>
+
+        <ul>
+            <li>Momentum is conserved (if external forces negligible)</li>
+            <li>Kinetic energy may or may not be conserved</li>
+        </ul>
+    </section>
+
+    <section id="types">
+        <h2>7. Types of Collisions</h2>
+
+        <div class="grid">
+            <div>
+                <strong>Elastic Collision</strong>
+                <ul>
+                    <li>Momentum conserved</li>
+                    <li>Kinetic energy conserved</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Inelastic Collision</strong>
+                <ul>
+                    <li>Momentum conserved</li>
+                    <li>Kinetic energy not conserved</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>
+            In a <strong>perfectly inelastic collision</strong>,
+            particles stick together after collision.
+        </p>
+    </section>
+
+    <section id="restitution">
+        <h2>8. Coefficient of Restitution</h2>
+        <p>
+            The coefficient of restitution \(e\) measures the elasticity of a collision.
+        </p>
+
+        <div class="formula-block">
+            \[
+            e = \frac{\text{relative speed of separation}}
+                     {\text{relative speed of approach}}
+            \]
+        </div>
+
+        <ul>
+            <li>\(0 \le e \le 1\)</li>
+            <li>\(e = 1\): elastic</li>
+            <li>\(e = 0\): perfectly inelastic</li>
+        </ul>
+
+        <div class="insightbox">
+            Restitution connects kinematics
+            with momentum conservation.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>9. Common Mistakes</h2>
+        <ul>
+            <li>Applying energy conservation to inelastic collisions</li>
+            <li>Ignoring external impulses</li>
+            <li>Confusing COM velocity with particle velocity</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
