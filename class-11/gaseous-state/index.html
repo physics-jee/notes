@@ -2,17 +2,219 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | gaseous-state</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaseous State | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #8e44ad; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #f5eef8; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: gaseous-state</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for gaseous-state will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Gaseous State</h1>
+    <p style="text-align: center;"><em>Macroscopic description of gases under mechanical constraints.</em></p>
+
+    <section id="state-variables">
+        <h2>1. State Variables</h2>
+        <p>
+            The thermodynamic state of a gas is described using measurable
+            macroscopic quantities.
+        </p>
+
+        <ul>
+            <li><strong>Pressure (P)</strong> — mechanical constraint via container walls</li>
+            <li><strong>Volume (V)</strong> — geometrical constraint of the container</li>
+            <li><strong>Temperature (T)</strong> — thermal state of the gas</li>
+            <li><strong>Amount of gas (n)</strong> — number of moles</li>
+        </ul>
+
+        <div class="insightbox">
+            In gases, pressure and volume are not intrinsic —
+            they are imposed by boundaries.
+        </div>
+    </section>
+
+    <section id="pressure">
+        <h2>2. Pressure of a Gas</h2>
+        <p>
+            Gas pressure arises due to collisions of gas molecules
+            with the container walls.
+        </p>
+
+        <div class="formula-block">
+            \[
+            P = \frac{F}{A}
+            \]
+        </div>
+
+        <ul>
+            <li>Scalar quantity</li>
+            <li>Acts normal to surfaces</li>
+        </ul>
+    </section>
+
+    <section id="boyle">
+        <h2>3. Boyle’s Law (Isothermal Process)</h2>
+        <p>
+            For a fixed mass of gas at constant temperature,
+            pressure is inversely proportional to volume.
+        </p>
+
+        <div class="formula-block">
+            \[
+            P \propto \frac{1}{V}
+            \quad \Rightarrow \quad
+            PV = \text{constant}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Boyle’s law reflects a purely mechanical constraint
+            at constant thermal state.
+        </div>
+    </section>
+
+    <section id="charles">
+        <h2>4. Charles’ Law (Isobaric Process)</h2>
+        <p>
+            At constant pressure, the volume of a gas
+            is directly proportional to its absolute temperature.
+        </p>
+
+        <div class="formula-block">
+            \[
+            V \propto T
+            \quad \Rightarrow \quad
+            \frac{V}{T} = \text{constant}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Temperature must be measured on the Kelvin scale.
+        </div>
+    </section>
+
+    <section id="gay-lussac">
+        <h2>5. Gay–Lussac’s Law (Isochoric Process)</h2>
+        <p>
+            At constant volume, pressure of a gas
+            is directly proportional to absolute temperature.
+        </p>
+
+        <div class="formula-block">
+            \[
+            P \propto T
+            \quad \Rightarrow \quad
+            \frac{P}{T} = \text{constant}
+            \]
+        </div>
+    </section>
+
+    <section id="combined">
+        <h2>6. Combined Gas Law</h2>
+        <p>
+            For a fixed mass of gas:
+        </p>
+
+        <div class="formula-block">
+            \[
+            \frac{PV}{T} = \text{constant}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Gas laws connect different mechanical constraints
+            through temperature.
+        </div>
+    </section>
+
+    <section id="ideal-gas">
+        <h2>7. Ideal Gas Equation</h2>
+        <p>
+            Combining all gas laws gives the equation of state
+            for an ideal gas.
+        </p>
+
+        <div class="formula-block">
+            \[
+            PV = nRT
+            \]
+        </div>
+
+        <ul>
+            <li>\(n\): number of moles</li>
+            <li>\(R\): universal gas constant</li>
+        </ul>
+
+        <div class="insightbox">
+            The ideal gas is a model —
+            real gases approximate it at low pressure and high temperature.
+        </div>
+    </section>
+
+    <section id="density">
+        <h2>8. Density of a Gas</h2>
+
+        <div class="formula-block">
+            \[
+            \rho = \frac{PM}{RT}
+            \]
+        </div>
+
+        <ul>
+            <li>\(M\): molar mass</li>
+            <li>Explains why lighter gases rise</li>
+        </ul>
+    </section>
+
+    <section id="limitations">
+        <h2>9. Limitations of Gas Laws</h2>
+        <ul>
+            <li>Break down at high pressure</li>
+            <li>Fail at very low temperatures</li>
+            <li>Ignore intermolecular forces and molecular volume</li>
+        </ul>
+
+        <div class="insightbox">
+            Limitations motivate the kinetic theory
+            and real gas models.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>10. Common Mistakes</h2>
+        <ul>
+            <li>Using Celsius instead of Kelvin</li>
+            <li>Applying gas laws to changing mass</li>
+            <li>Forgetting process constraints (iso-*)</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
