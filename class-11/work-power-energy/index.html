@@ -2,17 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | work-power-energy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Energy & Power | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #9b59b6; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #f4ecf7; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: work-power-energy</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for work-power-energy will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Work, Energy & Power</h1>
+    <p style="text-align: center;"><em>A scalar approach to understanding motion and change.</em></p>
+
+    <section id="work">
+        <h2>1. Work</h2>
+        <p>
+            <strong>Work</strong> is said to be done when a force produces displacement
+            in its direction.
+        </p>
+
+        <div class="formula-block">
+            \[
+            W = \vec F \cdot \vec s = Fs\cos\theta
+            \]
+        </div>
+
+        <ul>
+            <li>Work depends on force, displacement, and angle between them</li>
+            <li>Zero work if displacement is perpendicular to force</li>
+        </ul>
+
+        <div class="insightbox">
+            Work is path-dependent for variable forces.
+        </div>
+    </section>
+
+    <section id="variable-force">
+        <h2>2. Work by a Variable Force</h2>
+        <p>
+            When force varies with position, work is defined via integration.
+        </p>
+
+        <div class="formula-block">
+            \[
+            W = \int \vec F \cdot d\vec r
+            \]
+        </div>
+
+        <p>
+            Graphically, work equals the area under the force–displacement curve.
+        </p>
+    </section>
+
+    <section id="energy">
+        <h2>3. Kinetic Energy</h2>
+        <p>
+            <strong>Kinetic energy</strong> is the energy possessed by a body due to its motion.
+        </p>
+
+        <div class="formula-block">
+            \[
+            K = \frac{1}{2}mv^2
+            \]
+        </div>
+
+        <div class="insightbox">
+            Kinetic energy depends on the frame of reference.
+        </div>
+    </section>
+
+    <section id="w-e-theorem">
+        <h2>4. Work–Energy Theorem</h2>
+        <p>
+            The net work done on a body equals the change in its kinetic energy.
+        </p>
+
+        <div class="formula-block">
+            \[
+            W_{\text{net}} = \Delta K
+            \]
+        </div>
+
+        <p>
+            This theorem is valid even when forces are variable.
+        </p>
+
+        <div class="insightbox">
+            Work–energy theorem is Newton’s second law in scalar form.
+        </div>
+    </section>
+
+    <section id="potential">
+        <h2>5. Potential Energy</h2>
+        <p>
+            Potential energy is energy associated with position or configuration.
+        </p>
+
+        <h3>Gravitational Potential Energy (Near Earth)</h3>
+        <div class="formula-block">
+            \[
+            U = mgh
+            \]
+        </div>
+
+        <h3>Spring Potential Energy</h3>
+        <div class="formula-block">
+            \[
+            U = \frac{1}{2}kx^2
+            \]
+        </div>
+
+        <div class="insightbox">
+            Potential energy is defined only for conservative forces.
+        </div>
+    </section>
+
+    <section id="conservative">
+        <h2>6. Conservative & Non-Conservative Forces</h2>
+
+        <div class="grid">
+            <div>
+                <strong>Conservative</strong>
+                <ul>
+                    <li>Path independent work</li>
+                    <li>Potential energy definable</li>
+                    <li>Gravity, spring force</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Non-Conservative</strong>
+                <ul>
+                    <li>Path dependent work</li>
+                    <li>No single potential energy</li>
+                    <li>Friction</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="energy-conservation">
+        <h2>7. Conservation of Mechanical Energy</h2>
+        <p>
+            If only conservative forces act, total mechanical energy remains constant.
+        </p>
+
+        <div class="formula-block">
+            \[
+            K + U = \text{constant}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Conservation laws reduce differential equations
+            to algebra.
+        </div>
+    </section>
+
+    <section id="power">
+        <h2>8. Power</h2>
+        <p>
+            <strong>Power</strong> is the rate of doing work.
+        </p>
+
+        <div class="formula-block">
+            Average Power:
+            \[
+            P_{\text{avg}} = \frac{W}{t}
+            \]
+            <br><br>
+            Instantaneous Power:
+            \[
+            P = \vec F \cdot \vec v
+            \]
+        </div>
+
+        <div class="insightbox">
+            High power means fast energy transfer,
+            not necessarily large force.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>9. Common Mistakes</h2>
+        <ul>
+            <li>Using energy conservation when friction is present</li>
+            <li>Forgetting reference level in potential energy</li>
+            <li>Confusing work with force</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
