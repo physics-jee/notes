@@ -5,106 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motion in One Dimension | JEE Physics Notes</title>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
     <style>
-        :root { --primary: #2c3e50; --secondary: #27ae60; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root { --primary:#2c3e50; --secondary:#2980b9; --accent:#3498db; --bg:#fdfdfd; }
+        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.7; background:var(--bg); color:#333; margin:0; padding:20px; }
+        .container { max-width:900px; margin:auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { color:var(--primary); }
+        h1 { border-bottom:3px solid var(--secondary); padding-bottom:10px; text-align:center; }
+        h2 { border-left:5px solid var(--secondary); padding-left:15px; margin-top:40px; }
+        nav a { text-decoration:none; color:var(--accent); font-weight:bold; }
+        .chapter-list a { display:block; padding:10px 0; text-decoration:none; color:#2c3e50; }
+        .chapter-list a:hover { color:var(--accent); }
+        .insightbox { background:#ecf6fd; border-left:5px solid var(--secondary); padding:20px; margin:25px 0; border-radius:0 8px 8px 0; font-style:italic; }
+        footer { text-align:center; margin-top:50px; color:#7f8c8d; font-size:0.9rem; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+    <nav>
+    <a href="../../index.html">← Back to Syllabus</a> |
+    <a href="./index.html">Motion in 1D</a>
+</nav>
+
 
     <h1>Motion in One Dimension</h1>
-    <p style="text-align: center;"><em>Describing how objects move along a straight line.</em></p>
+    <p style="text-align:center;">
+        <em>The first quantitative description of motion.</em>
+    </p>
 
-    <section id="reference-motion">
-        <h2>1. Frame of Reference & Motion</h2>
-        <p>Motion must be described relative to a chosen <strong>reference point</strong> and a chosen <strong>direction</strong>.</p>
+    <section>
+        <h2>Chapter Overview</h2>
+        <p>
+            Motion in one dimension is the first formal step in mechanics.
+            In this chapter, we learn how to describe motion using space and time,
+            without worrying about the causes of motion.
+        </p>
+
+        <p>
+            This chapter belongs to <strong>kinematics</strong> — the branch of
+            mechanics concerned only with describing motion, not explaining it.
+        </p>
 
         <div class="insightbox">
-            Motion is not absolute — it depends on *where* and *how* you measure it.
+            Kinematics answers <em>how</em> objects move,
+            not <em>why</em> they move.
         </div>
     </section>
 
-    <section id="distance-displacement">
-        <h2>2. Distance vs. Displacement</h2>
-        <p><strong>Distance</strong> is the total path length covered (scalar), whereas <strong>displacement</strong> is the net change in position (vector).</p>
-
+    <section>
+        <h2>How to Study This Chapter</h2>
         <ul>
-            <li>Distance ≥ |Displacement|</li>
-            <li>Displacement can be positive, negative, or zero</li>
+            <li>Focus on definitions and sign conventions</li>
+            <li>Understand graphs geometrically</li>
+            <li>Do not memorize equations without derivation</li>
         </ul>
     </section>
 
-    <section id="speed-velocity">
-        <h2>3. Speed & Velocity</h2>
-        <p><strong>Speed</strong> is how fast an object moves (scalar). <strong>Velocity</strong> is the rate of change of displacement (vector).</p>
+    <section>
+        <h2>Chapter Sections</h2>
 
-        <div class="formula-block">
-            Average Velocity: \( \bar v = \frac{\Delta x}{\Delta t} \)  
-            <br>Average Speed: \( \text{speed} = \frac{\text{total distance}}{\text{total time}} \)
-        </div>
-
-        <div class="insightbox">
-            Instantaneous velocity is the value of velocity at a specific moment in time.
-        </div>
-    </section>
-
-    <section id="acceleration">
-        <h2>4. Acceleration</h2>
-        <p>Acceleration measures how quickly velocity changes.</p>
-
-        <div class="formula-block">
-            Average Acceleration:
-            \[
-            \bar a = \frac{\Delta v}{\Delta t}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Uniform acceleration means the rate of change of velocity is constant.
-        </div>
-    </section>
-
-    <section id="kinematic-equations">
-        <h2>5. Kinematic Equations (Constant Acceleration)</h2>
-        <p>When acceleration is constant, the following relations connect velocity, displacement, and time:</p>
-
-        <div class="formula-block">
-            \( v = u + at \)  
-            \( \quad s = ut + \tfrac{1}{2}at^2 \)  
-            \( \quad v^2 = u^2 + 2as \)
-        </div>
-
-        <p>Here, \(u\) is initial velocity, \(v\) is final velocity, \(a\) is constant acceleration, and \(s\) is displacement. :contentReference[oaicite:1]{index=1}</p>
-    </section>
-
-    <section id="graphs">
-        <h2>6. Motion Graphs</h2>
-        <p>Graphs give visual insight into motion:</p>
-
-        <ul>
-            <li><strong>Position–Time (x–t)</strong>: Slope gives velocity</li>
-            <li><strong>Velocity–Time (v–t)</strong>: Slope gives acceleration; area under curve gives displacement</li>
-        </ul>
-
-        <div class="insightbox">
-            Recognizing shapes — horizontal lines, straight slopes, curves — is often more useful than memorizing equations.
+        <div class="chapter-list">
+            <a href="./01-introduction.html">1. Why Motion and Mechanics?</a>
+            <a href="./02-frame-of-reference.html">2. Frame of Reference</a>
+            <a href="./03-position-displacement.html">3. Position, Distance & Displacement</a>
+            <a href="./04-speed-velocity.html">4. Speed and Velocity</a>
+            <a href="./05-acceleration.html">5. Acceleration</a>
+            <a href="./06-motion-graphs.html">6. Motion Graphs</a>
+            <a href="./07-equations-of-motion.html">7. Equations of Motion</a>
+            <a href="./08-relative-motion-1d.html">8. Relative Motion in One Dimension</a>
         </div>
     </section>
 
