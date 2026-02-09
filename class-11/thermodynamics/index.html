@@ -2,17 +2,262 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | thermodynamics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #2ecc71; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #eafaf1; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: thermodynamics</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for thermodynamics will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Thermodynamics</h1>
+    <p style="text-align: center;"><em>General laws governing heat, work, and energy.</em></p>
+
+    <section id="system">
+        <h2>1. Thermodynamic System</h2>
+        <p>
+            A <strong>thermodynamic system</strong> is a macroscopic part of the universe
+            chosen for analysis.
+        </p>
+
+        <ul>
+            <li><strong>Open system</strong> — exchanges mass and energy</li>
+            <li><strong>Closed system</strong> — exchanges energy only</li>
+            <li><strong>Isolated system</strong> — exchanges neither</li>
+        </ul>
+
+        <div class="insightbox">
+            Thermodynamics ignores microscopic details
+            and focuses on macroscopic state.
+        </div>
+    </section>
+
+    <section id="state">
+        <h2>2. Thermodynamic State & Variables</h2>
+        <p>
+            The state of a system is defined by state variables
+            such as pressure, volume, and temperature.
+        </p>
+
+        <div class="grid">
+            <div>
+                <strong>State variables</strong>
+                <ul>
+                    <li>P, V, T, U</li>
+                    <li>Path independent</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Path variables</strong>
+                <ul>
+                    <li>Heat (Q), Work (W)</li>
+                    <li>Depend on process</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="insightbox">
+            A state variable remembers only
+            where the system is — not how it got there.
+        </div>
+    </section>
+
+    <section id="process">
+        <h2>3. Thermodynamic Process</h2>
+        <p>
+            A <strong>process</strong> is a transformation from one equilibrium state
+            to another.
+        </p>
+
+        <ul>
+            <li>Isothermal (T constant)</li>
+            <li>Isobaric (P constant)</li>
+            <li>Isochoric (V constant)</li>
+            <li>Adiabatic (Q = 0)</li>
+        </ul>
+    </section>
+
+    <section id="work">
+        <h2>4. Work in Thermodynamics</h2>
+        <p>
+            Work is done when the boundary of a system moves.
+        </p>
+
+        <div class="formula-block">
+            \[
+            W = \int P\,dV
+            \]
+        </div>
+
+        <ul>
+            <li>Area under P–V curve represents work</li>
+            <li>Depends on path followed</li>
+        </ul>
+
+        <div class="insightbox">
+            Same initial and final states
+            can involve different work.
+        </div>
+    </section>
+
+    <section id="internal-energy">
+        <h2>5. Internal Energy</h2>
+        <p>
+            <strong>Internal energy (U)</strong> is the total microscopic energy
+            of a system.
+        </p>
+
+        <ul>
+            <li>State function</li>
+            <li>For ideal gas, depends only on temperature</li>
+        </ul>
+    </section>
+
+    <section id="first-law">
+        <h2>6. First Law of Thermodynamics</h2>
+        <p>
+            The first law is the law of energy conservation
+            for thermodynamic systems.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \Delta U = Q - W
+            \]
+        </div>
+
+        <ul>
+            <li>Q &gt; 0: heat added to system</li>
+            <li>W &gt; 0: work done by system</li>
+        </ul>
+
+        <div class="insightbox">
+            The first law does not say
+            which processes are possible —
+            only how energy balances.
+        </div>
+    </section>
+
+    <section id="special-processes">
+        <h2>7. First Law for Special Processes</h2>
+
+        <div class="grid">
+            <div>
+                <strong>Isochoric</strong>
+                <ul>
+                    <li>W = 0</li>
+                    <li>Q = ΔU</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Isothermal (ideal gas)</strong>
+                <ul>
+                    <li>ΔU = 0</li>
+                    <li>Q = W</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <strong>Adiabatic</strong>
+                <ul>
+                    <li>Q = 0</li>
+                    <li>ΔU = −W</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Isobaric</strong>
+                <ul>
+                    <li>W = PΔV</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="heat-capacity">
+        <h2>8. Heat Capacities of Gases</h2>
+        <p>
+            Heat capacity depends on the constraint
+            under which heating occurs.
+        </p>
+
+        <div class="formula-block">
+            \[
+            C_V = \left(\frac{dQ}{dT}\right)_V,
+            \quad
+            C_P = \left(\frac{dQ}{dT}\right)_P
+            \]
+        </div>
+
+        <div class="formula-block">
+            Mayer’s relation:
+            \[
+            C_P - C_V = R
+            \]
+        </div>
+
+        <div class="insightbox">
+            Constraints change energy pathways.
+        </div>
+    </section>
+
+    <section id="cyclic">
+        <h2>9. Cyclic Process</h2>
+        <p>
+            In a cyclic process, the system returns
+            to its initial state.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \Delta U = 0
+            \Rightarrow
+            Q = W
+            \]
+        </div>
+
+        <div class="insightbox">
+            Cycles convert heat into work
+            without storing energy.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>10. Common Mistakes</h2>
+        <ul>
+            <li>Forgetting sign convention in first law</li>
+            <li>Confusing heat with internal energy</li>
+            <li>Assuming work depends only on states</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
