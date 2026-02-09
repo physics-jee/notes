@@ -2,17 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | rotational-mechanics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #34495e; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #ecf0f1; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: rotational-mechanics</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for rotational-mechanics will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Rotational Mechanics</h1>
+    <p style="text-align: center;"><em>Dynamics of rigid bodies about a fixed or moving axis.</em></p>
+
+    <section id="rigid-body">
+        <h2>1. Rigid Body</h2>
+        <p>
+            A <strong>rigid body</strong> is an ideal system of particles in which the
+            distance between any two particles remains constant.
+        </p>
+
+        <div class="insightbox">
+            Rigid body motion = translation of COM + rotation about COM.
+        </div>
+    </section>
+
+    <section id="angular-kinematics">
+        <h2>2. Angular Variables</h2>
+        <p>
+            Rotational motion is described using angular quantities analogous
+            to linear motion.
+        </p>
+
+        <div class="formula-block">
+            Angular displacement: \( \theta \)  
+            <br>Angular velocity: \( \omega = \frac{d\theta}{dt} \)  
+            <br>Angular acceleration: \( \alpha = \frac{d\omega}{dt} \)
+        </div>
+    </section>
+
+    <section id="linear-angular">
+        <h2>3. Linear–Angular Relations</h2>
+
+        <div class="formula-block">
+            \( v = r\omega \)  
+            <br>\( a_t = r\alpha \)  
+            <br>\( a_c = r\omega^2 \)
+        </div>
+
+        <div class="insightbox">
+            All particles share the same \( \omega \),
+            but not the same linear velocity.
+        </div>
+    </section>
+
+    <section id="moment-inertia">
+        <h2>4. Moment of Inertia</h2>
+        <p>
+            The <strong>moment of inertia</strong> measures a body's resistance
+            to angular acceleration.
+        </p>
+
+        <div class="formula-block">
+            \[
+            I = \sum m_i r_i^2
+            \]
+        </div>
+
+        <ul>
+            <li>Depends on mass distribution</li>
+            <li>Depends on choice of axis</li>
+        </ul>
+
+        <div class="insightbox">
+            Mass resists linear acceleration,
+            moment of inertia resists angular acceleration.
+        </div>
+    </section>
+
+    <section id="theorems">
+        <h2>5. Parallel & Perpendicular Axis Theorems</h2>
+
+        <div class="formula-block">
+            Parallel Axis:
+            \[
+            I = I_{\text{CM}} + Md^2
+            \]
+        </div>
+
+        <div class="formula-block">
+            Perpendicular Axis (planar bodies):
+            \[
+            I_z = I_x + I_y
+            \]
+        </div>
+    </section>
+
+    <section id="torque">
+        <h2>6. Torque</h2>
+        <p>
+            <strong>Torque</strong> is the rotational analogue of force.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \vec \tau = \vec r \times \vec F
+            \]
+        </div>
+
+        <ul>
+            <li>Depends on force and lever arm</li>
+            <li>Direction given by right-hand rule</li>
+        </ul>
+
+        <div class="insightbox">
+            Large force does not guarantee large torque.
+        </div>
+    </section>
+
+    <section id="rotational-dynamics">
+        <h2>7. Equation of Rotational Motion</h2>
+
+        <div class="formula-block">
+            \[
+            \vec \tau_{\text{net}} = I\vec \alpha
+            \]
+        </div>
+
+        <p>
+            This is the rotational analogue of Newton’s second law.
+        </p>
+    </section>
+
+    <section id="angular-momentum">
+        <h2>8. Angular Momentum</h2>
+        <p>
+            Angular momentum describes rotational state of motion.
+        </p>
+
+        <div class="formula-block">
+            Particle:
+            \[
+            \vec L = \vec r \times \vec p
+            \]
+            <br><br>
+            Rigid body (about fixed axis):
+            \[
+            L = I\omega
+            \]
+        </div>
+    </section>
+
+    <section id="conservation">
+        <h2>9. Conservation of Angular Momentum</h2>
+        <p>
+            If net external torque is zero,
+            angular momentum remains constant.
+        </p>
+
+        <div class="formula-block">
+            \[
+            L_{\text{initial}} = L_{\text{final}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Angular momentum conservation explains
+            spinning skaters and collapsing stars.
+        </div>
+    </section>
+
+    <section id="rolling">
+        <h2>10. Rolling Motion</h2>
+        <p>
+            Rolling without slipping is a combination of
+            translation and rotation.
+        </p>
+
+        <div class="formula-block">
+            \[
+            v_{\text{CM}} = \omega R
+            \]
+        </div>
+
+        <ul>
+            <li>Point of contact has zero velocity</li>
+            <li>Static friction enables rolling</li>
+        </ul>
+
+        <div class="insightbox">
+            Rolling is constrained motion,
+            not pure rotation.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>11. Common Mistakes</h2>
+        <ul>
+            <li>Using wrong axis for moment of inertia</li>
+            <li>Forgetting torque of normal / friction</li>
+            <li>Mixing particle and rigid body formulas</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
