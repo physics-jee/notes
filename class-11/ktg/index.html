@@ -2,17 +2,254 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | ktg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Theory of Gases | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #16a085; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: ktg</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for ktg will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Kinetic Theory of Gases</h1>
+    <p style="text-align: center;"><em>Microscopic origin of pressure, temperature, and internal energy.</em></p>
+
+    <section id="model">
+        <h2>1. Molecular Model of an Ideal Gas</h2>
+        <p>
+            The kinetic theory models a gas as a large number of identical molecules
+            moving randomly in all directions.
+        </p>
+
+        <ul>
+            <li>Molecules are point masses</li>
+            <li>Intermolecular forces negligible (except during collisions)</li>
+            <li>Collisions are perfectly elastic</li>
+        </ul>
+
+        <div class="insightbox">
+            KTG replaces macroscopic averages
+            with microscopic statistics.
+        </div>
+    </section>
+
+    <section id="pressure-origin">
+        <h2>2. Origin of Gas Pressure</h2>
+        <p>
+            Gas pressure arises due to repeated collisions
+            of molecules with container walls.
+        </p>
+
+        <div class="formula-block">
+            \[
+            P = \frac{1}{3}\rho \overline{c^2}
+            \]
+        </div>
+
+        <ul>
+            <li>\(\rho\): mass density of gas</li>
+            <li>\(\overline{c^2}\): mean square speed</li>
+        </ul>
+
+        <div class="insightbox">
+            Pressure is a momentum-transfer phenomenon.
+        </div>
+    </section>
+
+    <section id="speed">
+        <h2>3. Molecular Speeds</h2>
+        <p>
+            Gas molecules do not all move with the same speed.
+            We describe them using averages.
+        </p>
+
+        <div class="formula-block">
+            Most probable speed:
+            \[
+            c_p = \sqrt{\frac{2kT}{m}}
+            \]
+        </div>
+
+        <div class="formula-block">
+            Mean speed:
+            \[
+            \bar c = \sqrt{\frac{8kT}{\pi m}}
+            \]
+        </div>
+
+        <div class="formula-block">
+            RMS speed:
+            \[
+            c_{\text{rms}} = \sqrt{\frac{3kT}{m}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Temperature controls speed distribution,
+            not individual molecular motion.
+        </div>
+    </section>
+
+    <section id="temperature">
+        <h2>4. Temperature and Kinetic Energy</h2>
+        <p>
+            Absolute temperature is a measure of
+            average translational kinetic energy.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \frac{1}{2}m\overline{c^2} = \frac{3}{2}kT
+            \]
+        </div>
+
+        <div class="insightbox">
+            Temperature is a statistical quantity,
+            not a property of a single molecule.
+        </div>
+    </section>
+
+    <section id="ideal-gas">
+        <h2>5. Ideal Gas Equation from KTG</h2>
+        <p>
+            Using molecular interpretation,
+            the ideal gas equation can be derived.
+        </p>
+
+        <div class="formula-block">
+            \[
+            PV = NkT
+            \]
+        </div>
+
+        <p>
+            Where \(N\) is number of molecules and \(k\) is Boltzmann constant.
+        </p>
+
+        <div class="insightbox">
+            Gas laws emerge naturally
+            from molecular motion.
+        </div>
+    </section>
+
+    <section id="internal-energy">
+        <h2>6. Internal Energy of an Ideal Gas</h2>
+        <p>
+            Internal energy equals total kinetic energy
+            of all molecules.
+        </p>
+
+        <div class="formula-block">
+            \[
+            U = \frac{f}{2}NkT
+            \]
+        </div>
+
+        <ul>
+            <li>\(f\): degrees of freedom</li>
+            <li>Monatomic gas: \(f = 3\)</li>
+        </ul>
+
+        <div class="insightbox">
+            Ideal gas has no potential energy contribution.
+        </div>
+    </section>
+
+    <section id="degrees">
+        <h2>7. Degrees of Freedom</h2>
+
+        <div class="grid">
+            <div>
+                <strong>Monatomic</strong>
+                <ul>
+                    <li>3 translational</li>
+                    <li>\(U = \frac{3}{2}RT\)</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Diatomic (room temp)</strong>
+                <ul>
+                    <li>3 translational + 2 rotational</li>
+                    <li>\(U = \frac{5}{2}RT\)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="insightbox">
+            Degrees of freedom depend on temperature.
+        </div>
+    </section>
+
+    <section id="specific-heats">
+        <h2>8. Specific Heats from KTG</h2>
+
+        <div class="formula-block">
+            \[
+            C_V = \frac{f}{2}R
+            \quad,\quad
+            C_P = C_V + R
+            \]
+        </div>
+
+        <div class="formula-block">
+            \[
+            \gamma = \frac{C_P}{C_V}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Heat capacities reflect energy storage modes.
+        </div>
+    </section>
+
+    <section id="limitations">
+        <h2>9. Limitations of KTG</h2>
+        <ul>
+            <li>Fails at high pressure</li>
+            <li>Fails at low temperature</li>
+            <li>Cannot explain liquefaction</li>
+        </ul>
+
+        <div class="insightbox">
+            Real gas behavior requires
+            intermolecular forces.
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>10. Common Mistakes</h2>
+        <ul>
+            <li>Interpreting temperature of a single molecule</li>
+            <li>Mixing macroscopic and microscopic constants</li>
+            <li>Forgetting factor of 3 in RMS speed</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
