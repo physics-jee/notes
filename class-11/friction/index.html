@@ -2,17 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | friction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friction | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #7f8c8d; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #f4f6f7; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: friction</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for friction will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Friction</h1>
+    <p style="text-align: center;"><em>A force that opposes relative motion between surfaces in contact.</em></p>
+
+    <section id="introduction">
+        <h2>1. Nature of Friction</h2>
+        <p>
+            <strong>Friction</strong> is a contact force that resists relative motion or the tendency of relative motion
+            between two surfaces in contact.
+        </p>
+
+        <ul>
+            <li>Acts tangentially at the surface of contact</li>
+            <li>Opposes motion or impending motion</li>
+        </ul>
+
+        <div class="insightbox">
+            Friction is not a “reaction” force —  
+            it is an adaptive force.
+        </div>
+    </section>
+
+    <section id="types">
+        <h2>2. Types of Friction</h2>
+
+        <ul>
+            <li><strong>Static Friction</strong> — prevents relative motion</li>
+            <li><strong>Kinetic (Sliding) Friction</strong> — acts during motion</li>
+            <li><strong>Rolling Friction</strong> — much smaller than sliding friction</li>
+        </ul>
+    </section>
+
+    <section id="static-friction">
+        <h2>3. Static Friction</h2>
+        <p>
+            Static friction adjusts its magnitude to match the applied force, up to a maximum value.
+        </p>
+
+        <div class="formula-block">
+            \[
+            f_s \le f_{s,\max} = \mu_s N
+            \]
+        </div>
+
+        <ul>
+            <li>\(N\) is the normal reaction</li>
+            <li>\(\mu_s\) is the coefficient of static friction</li>
+        </ul>
+
+        <div class="insightbox">
+            Static friction is whatever it needs to be —  
+            until it can’t.
+        </div>
+    </section>
+
+    <section id="kinetic-friction">
+        <h2>4. Kinetic Friction</h2>
+        <p>
+            Once relative motion begins, friction becomes approximately constant.
+        </p>
+
+        <div class="formula-block">
+            \[
+            f_k = \mu_k N
+            \]
+        </div>
+
+        <ul>
+            <li>\(\mu_k < \mu_s\)</li>
+            <li>Direction always opposite to relative velocity</li>
+        </ul>
+
+        <div class="insightbox">
+            Kinetic friction depends weakly on speed  
+            at the JEE level.
+        </div>
+    </section>
+
+    <section id="direction">
+        <h2>5. Direction of Friction</h2>
+        <p>
+            The direction of friction is determined by the tendency of relative motion,
+            not by the applied force.
+        </p>
+
+        <ul>
+            <li>Ask: “If friction were absent, how would the body move?”</li>
+            <li>Friction acts opposite to that tendency</li>
+        </ul>
+
+        <div class="insightbox">
+            Direction errors in friction problems  
+            destroy otherwise correct solutions.
+        </div>
+    </section>
+
+    <section id="limiting">
+        <h2>6. Limiting Friction & Angle of Friction</h2>
+
+        <div class="formula-block">
+            \[
+            \tan \theta = \mu_s
+            \]
+        </div>
+
+        <p>
+            Here, \(\theta\) is the <strong>angle of friction</strong>,
+            the angle between the resultant reaction and the normal.
+        </p>
+    </section>
+
+    <section id="common-mistakes">
+        <h2>7. Common Misconceptions</h2>
+        <ul>
+            <li>Friction ≠ always \(\mu N\) (only true at limiting or kinetic case)</li>
+            <li>Normal reaction is not always equal to weight</li>
+            <li>Action–reaction pairs never act on the same body</li>
+        </ul>
+
+        <div class="insightbox">
+            Most friction problems are solved  
+            by thinking before calculating.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
