@@ -2,17 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | sound-waves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Waves | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #9b59b6; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #f4ecf7; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: sound-waves</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for sound-waves will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Sound Waves</h1>
+    <p style="text-align: center;"><em>Longitudinal waves in elastic media.</em></p>
+
+    <section>
+        <h2>1. Nature of Sound Waves</h2>
+        <p>
+            Sound waves are <strong>longitudinal mechanical waves</strong>
+            that propagate through a material medium.
+        </p>
+
+        <ul>
+            <li>Require a medium</li>
+            <li>Cannot propagate in vacuum</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Compressional Waves</h2>
+        <ul>
+            <li>Compressions → high pressure regions</li>
+            <li>Rarefactions → low pressure regions</li>
+        </ul>
+
+        <div class="insightbox">
+            Sound propagation is pressure oscillation,
+            not particle transport.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Speed of Sound</h2>
+
+        <div class="formula-block">
+            \[
+            v = \sqrt{\frac{E}{\rho}}
+            \]
+        </div>
+
+        <ul>
+            <li>Solids: Young’s modulus</li>
+            <li>Liquids: Bulk modulus</li>
+            <li>Gases: Adiabatic bulk modulus</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Speed of Sound in Gases</h2>
+
+        <div class="formula-block">
+            \[
+            v = \sqrt{\frac{\gamma RT}{M}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Speed of sound in gases
+            depends on temperature, not pressure.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Intensity & Loudness</h2>
+
+        <div class="formula-block">
+            \[
+            I = \frac{P}{A}
+            \]
+        </div>
+
+        <ul>
+            <li>Intensity ∝ amplitude²</li>
+            <li>Loudness is subjective</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>6. Doppler Effect</h2>
+
+        <div class="formula-block">
+            \[
+            f' = f \frac{v \pm v_o}{v \mp v_s}
+            \]
+        </div>
+
+        <ul>
+            <li>Observed frequency differs due to relative motion</li>
+        </ul>
+
+        <div class="insightbox">
+            Doppler effect arises from
+            changing wavefront spacing.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Standing Sound Waves</h2>
+        <ul>
+            <li>Open pipes → antinode at ends</li>
+            <li>Closed pipes → node at closed end</li>
+        </ul>
+
+        <div class="formula-block">
+            Open pipe:
+            \[
+            f_n = \frac{nv}{2L}
+            \]
+        </div>
+
+        <div class="formula-block">
+            Closed pipe:
+            \[
+            f_n = \frac{nv}{4L}
+            \quad (n = 1,3,5\dots)
+            \]
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
