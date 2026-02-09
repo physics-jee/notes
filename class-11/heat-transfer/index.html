@@ -2,17 +2,230 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JEE Physics | heat-transfer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Transfer | JEE Physics Notes</title>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        :root { --primary: #2c3e50; --secondary: #c0392b; --accent: #2980b9; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--primary); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
+        nav { margin-bottom: 30px; }
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Chapter: heat-transfer</h1>
-    <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-    <hr>
-    <div class="content">
-        <p>Derivations and Theory for heat-transfer will be added here.</p>
-        <img src="assets/diagram.jpg" alt="Physics Diagram" style="max-width:100%;">
-    </div>
+
+<div class="container">
+    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <h1>Heat Transfer</h1>
+    <p style="text-align: center;"><em>Mechanisms by which heat flows from one body to another.</em></p>
+
+    <section id="mechanisms">
+        <h2>1. Modes of Heat Transfer</h2>
+        <p>
+            Heat can be transferred between systems by three distinct mechanisms.
+        </p>
+
+        <ul>
+            <li><strong>Conduction</strong> — without bulk motion</li>
+            <li><strong>Convection</strong> — with bulk motion of fluid</li>
+            <li><strong>Radiation</strong> — via electromagnetic waves</li>
+        </ul>
+
+        <div class="insightbox">
+            The mechanism depends on the medium,
+            not on how hot the body is.
+        </div>
+    </section>
+
+    <section id="conduction">
+        <h2>2. Conduction</h2>
+        <p>
+            <strong>Conduction</strong> is heat transfer through a material
+            without any macroscopic movement of matter.
+        </p>
+
+        <div class="formula-block">
+            Rate of heat flow:
+            \[
+            \frac{dQ}{dt} = kA\frac{(T_1 - T_2)}{L}
+            \]
+        </div>
+
+        <ul>
+            <li>\(k\): thermal conductivity</li>
+            <li>High for metals, low for insulators</li>
+        </ul>
+
+        <div class="insightbox">
+            Temperature gradient drives conduction,
+            not temperature itself.
+        </div>
+    </section>
+
+    <section id="thermal-resistance">
+        <h2>3. Thermal Resistance</h2>
+        <p>
+            Conduction problems are simplified using thermal resistance,
+            analogous to electrical resistance.
+        </p>
+
+        <div class="formula-block">
+            \[
+            R = \frac{L}{kA}
+            \]
+            <br><br>
+            \[
+            \frac{dQ}{dt} = \frac{\Delta T}{R}
+            \]
+        </div>
+
+        <ul>
+            <li>Series and parallel combinations apply</li>
+            <li>Extremely useful for composite slabs</li>
+        </ul>
+    </section>
+
+    <section id="convection">
+        <h2>4. Convection</h2>
+        <p>
+            <strong>Convection</strong> is heat transfer by bulk motion of a fluid.
+        </p>
+
+        <ul>
+            <li><strong>Natural convection</strong> — due to density differences</li>
+            <li><strong>Forced convection</strong> — due to external agency (fan, pump)</li>
+        </ul>
+
+        <div class="formula-block">
+            Newton’s law of cooling:
+            \[
+            \frac{dQ}{dt} = hA(T - T_0)
+            \]
+        </div>
+
+        <div class="insightbox">
+            Convection requires a fluid;
+            solids do not convect.
+        </div>
+    </section>
+
+    <section id="newton-cooling">
+        <h2>5. Newton’s Law of Cooling</h2>
+        <p>
+            The rate of cooling of a body is proportional to
+            the temperature difference with surroundings
+            for small temperature differences.
+        </p>
+
+        <div class="formula-block">
+            \[
+            \frac{dT}{dt} \propto (T - T_0)
+            \]
+        </div>
+
+        <ul>
+            <li>Valid for small \(\Delta T\)</li>
+            <li>Depends on surface conditions</li>
+        </ul>
+    </section>
+
+    <section id="radiation">
+        <h2>6. Radiation</h2>
+        <p>
+            <strong>Radiation</strong> is heat transfer via electromagnetic waves
+            and does not require a material medium.
+        </p>
+
+        <div class="formula-block">
+            Stefan–Boltzmann law:
+            \[
+            P = \sigma A T^4
+            \]
+        </div>
+
+        <ul>
+            <li>Occurs even in vacuum</li>
+            <li>Depends strongly on temperature</li>
+        </ul>
+
+        <div class="insightbox">
+            Radiation dominates at high temperatures
+            and in vacuum.
+        </div>
+    </section>
+
+    <section id="emissivity">
+        <h2>7. Emissivity & Absorptivity</h2>
+        <p>
+            Real bodies deviate from ideal blackbody behavior.
+        </p>
+
+        <div class="formula-block">
+            \[
+            P = e\sigma A T^4
+            \]
+        </div>
+
+        <ul>
+            <li>\(e = 1\): perfect black body</li>
+            <li>Good absorbers are good emitters</li>
+        </ul>
+
+        <div class="insightbox">
+            Surface nature matters more than material bulk.
+        </div>
+    </section>
+
+    <section id="comparison">
+        <h2>8. Comparison of Heat Transfer Mechanisms</h2>
+
+        <div class="grid">
+            <div>
+                <strong>Conduction</strong>
+                <ul>
+                    <li>Requires medium</li>
+                    <li>No bulk motion</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Radiation</strong>
+                <ul>
+                    <li>No medium required</li>
+                    <li>Fast at high temperature</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="mistakes">
+        <h2>9. Common Mistakes</h2>
+        <ul>
+            <li>Using Newton’s law for large temperature differences</li>
+            <li>Ignoring surface area in radiation problems</li>
+            <li>Confusing conduction with convection</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K | Managed via GitHub Pages</p>
+    </footer>
+</div>
+
 </body>
 </html>
