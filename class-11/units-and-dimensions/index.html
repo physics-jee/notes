@@ -12,129 +12,86 @@
         :root { --primary: #2c3e50; --secondary: #16a085; --accent: #2980b9; --bg: #fdfdfd; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
         .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
+        h1, h2 { color: var(--primary); }
         h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
         h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
         nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .chapter-list a { display: block; padding: 8px 0; text-decoration: none; color: #2c3e50; }
+        .chapter-list a:hover { color: var(--secondary); }
+        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
         footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+
+    <nav>
+        <a href="../../index.html">← Back to Syllabus</a>
+    </nav>
 
     <h1>Units & Dimensions</h1>
-    <p style="text-align: center;"><em>The grammar that ensures physical equations make sense.</em></p>
+    <p style="text-align: center;">
+        <em>The formal structure that makes physical equations meaningful.</em>
+    </p>
 
-    <section id="physical-quantities">
-        <h2>1. Physical Quantities</h2>
-        <p>A <strong>physical quantity</strong> is something that can be measured and expressed using a number and a reference standard.</p>
+    <section>
+        <h2>Chapter Overview</h2>
 
-        <div class="grid">
-            <div>
-                <strong>Two Components:</strong>
-                <ul>
-                    <li>Numerical magnitude</li>
-                    <li>Unit (reference standard)</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Example:</strong>
-                Velocity = 5 m/s  
-                <br>5 → magnitude, m/s → unit
-            </div>
-        </div>
+        <p>
+            Physics expresses natural phenomena quantitatively.
+            Every measurable statement must be written as
+            a numerical value multiplied by a unit.
+        </p>
+
+        <p>
+            This chapter establishes the formal system that ensures
+            such expressions are consistent, universal, and logically valid.
+        </p>
 
         <div class="insightbox">
-            Physics does not deal with pure numbers.  
-            Every meaningful number must be tied to a physical reference.
+            Units give physical meaning to numbers.  
+            Dimensions ensure equations are structurally consistent.
         </div>
+
+        <p>
+            Without this framework, mathematical expressions
+            would be physically meaningless.
+        </p>
     </section>
 
-    <section id="units">
-        <h2>2. Units and Systems of Units</h2>
-        <p>A <strong>unit</strong> is a chosen standard used to measure a physical quantity.</p>
-
-        <h3>Fundamental Units (SI)</h3>
+    <section>
+        <h2>What This Chapter Does</h2>
         <ul>
-            <li>Length → metre (m)</li>
-            <li>Mass → kilogram (kg)</li>
-            <li>Time → second (s)</li>
-            <li>Electric current → ampere (A)</li>
-            <li>Temperature → kelvin (K)</li>
-            <li>Amount of substance → mole (mol)</li>
-            <li>Luminous intensity → candela (cd)</li>
+            <li>Defines physical quantities rigorously</li>
+            <li>Introduces systems of units (SI system)</li>
+            <li>Distinguishes fundamental and derived quantities</li>
+            <li>Explains dimensions and dimensional formulae</li>
+            <li>Establishes the principle of dimensional homogeneity</li>
+            <li>Clarifies the power and limits of dimensional analysis</li>
         </ul>
-
-        <h3>Derived Units</h3>
-        <p>Obtained by combining fundamental units.</p>
-        <div class="formula-block">
-            Force = mass × acceleration  
-            <br>\( \Rightarrow [F] = \text{kg·m·s}^{-2} \)
-        </div>
     </section>
 
-    <section id="dimensions">
-        <h2>3. Dimensions</h2>
-        <p><strong>Dimensions</strong> express the dependence of a physical quantity on fundamental quantities.</p>
+<section>
+    <h2>Chapter Sections</h2>
+    <div class="chapter-list">
+        <a href="./01-physical-quantity.html">1. What is a Physical Quantity?</a>
+        <a href="./02-what-is-a-unit.html">2. What is a Unit?</a>
+        <a href="./03-fundamental-vs-derived.html">3. Fundamental vs Derived Quantities</a>
+        <a href="./04-si-system.html">4. The SI System</a>
+        <a href="./05-dimensions.html">5. Dimensions</a>
+        <a href="./06-dimensional-homogeneity.html">6. Dimensional Homogeneity</a>
+        <a href="./07-uses-of-dimensional-analysis.html">7. Uses of Dimensional Analysis</a>
+        <a href="./08-limitations.html">8. Limitations of Dimensional Methods</a>
+    </div>
+</section>
 
-        <div class="formula-block">
-            \[
-            [Q] = M^a L^b T^c
-            \]
-        </div>
-
-        <ul>
-            <li>Dimensions are independent of units</li>
-            <li>Same dimensions ≠ same physical quantity</li>
-        </ul>
-
-        <div class="insightbox">
-            Energy and torque have identical dimensions,  
-            but represent entirely different physical ideas.
-        </div>
-    </section>
-
-    <section id="dim-analysis">
-        <h2>4. Dimensional Analysis</h2>
-        <p>Dimensional analysis is a logical consistency check, not a derivation tool.</p>
-
-        <h3>Applications</h3>
-        <ul>
-            <li>Checking correctness of equations</li>
-            <li>Deriving relations up to dimensionless constants</li>
-            <li>Converting between unit systems</li>
-        </ul>
-
-        <div class="formula-block">
-            If \([LHS] \neq [RHS]\), the equation is physically impossible.
-        </div>
-    </section>
-
-    <section id="limitations">
-        <h2>5. Limitations of Dimensional Methods</h2>
-        <ul>
-            <li>Cannot determine numerical constants (½, 2π, etc.)</li>
-            <li>Fails for trigonometric, exponential, or logarithmic relations</li>
-            <li>Cannot distinguish between quantities with same dimensions</li>
-        </ul>
-
-        <div class="insightbox">
-            Dimensional analysis checks *syntax*,  
-            not the *semantics* of physics.
-        </div>
-    </section>
 
     <footer>
         <hr>
         <p>By Hitendra K K | Managed via GitHub Pages</p>
     </footer>
+
 </div>
 
 </body>
