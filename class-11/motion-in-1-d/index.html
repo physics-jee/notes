@@ -1,85 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion in One Dimension | JEE Physics Notes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion in One Dimension | JEE Physics Notes</title>
 
-    <style>
-        :root { --primary:#2c3e50; --secondary:#2980b9; --accent:#3498db; --bg:#fdfdfd; }
-        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.7; background:var(--bg); color:#333; margin:0; padding:20px; }
-        .container { max-width:900px; margin:auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+<style>
+        :root { 
+            --primary:#2c3e50; 
+            --secondary:#2980b9; 
+            --accent:#3498db; 
+            --bg:#f4f7fa; 
+        }
+
+        body { 
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height:1.7; 
+            background:var(--bg); 
+            color:#333; 
+            margin:0; 
+            padding:30px; 
+        }
+
+        .container { 
+            max-width:950px; 
+            margin:auto; 
+            background:#fff; 
+            padding:50px; 
+            border-radius:16px; 
+            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
+        }
+
         h1, h2 { color:var(--primary); }
-        h1 { border-bottom:3px solid var(--secondary); padding-bottom:10px; text-align:center; }
-        h2 { border-left:5px solid var(--secondary); padding-left:15px; margin-top:40px; }
-        nav a { text-decoration:none; color:var(--accent); font-weight:bold; }
-        .chapter-list a { display:block; padding:10px 0; text-decoration:none; color:#2c3e50; }
-        .chapter-list a:hover { color:var(--accent); }
-        .insightbox { background:#ecf6fd; border-left:5px solid var(--secondary); padding:20px; margin:25px 0; border-radius:0 8px 8px 0; font-style:italic; }
-        footer { text-align:center; margin-top:50px; color:#7f8c8d; font-size:0.9rem; }
+
+        h1 { 
+            border-bottom:3px solid var(--secondary); 
+            padding-bottom:12px; 
+            text-align:center; 
+            margin-bottom:10px;
+        }
+
+        .subtitle {
+            text-align:center;
+            opacity:0.7;
+            margin-bottom:35px;
+            font-size:0.95rem;
+        }
+
+        h2 { 
+            margin-top:40px; 
+            margin-bottom:15px;
+        }
+
+        section {
+            margin-bottom:40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content:"";
+            display:block;
+            height:1px;
+            margin-top:40px;
+            background:linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        /* Navigation */
+        .top-nav {
+            margin-bottom:35px;
+        }
+
+        .back-btn {
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:8px 14px;
+            background:#eef5fb;
+            border-radius:8px;
+            font-weight:600;
+            text-decoration:none;
+            color:var(--primary);
+            transition:all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background:#dcecf9;
+            transform:translateX(-3px);
+        }
+
+        ul {
+            margin-top:10px;
+            padding-left:20px;
+        }
+
+        /* Chapter Cards */
+        .chapter-list {
+            margin-top:25px;
+        }
+
+        .chapter-list a {
+            display:block;
+            padding:18px 20px;
+            margin-bottom:15px;
+            background:#f9fbfd;
+            border-left:5px solid var(--secondary);
+            border-radius:10px;
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            transition:all 0.25s ease;
+            position:relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position:absolute;
+            right:20px;
+            opacity:0.4;
+            transition:all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background:#eef5fb;
+            transform:translateY(-3px);
+            box-shadow:0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity:1;
+            right:15px;
+        }
+
+        footer { 
+            text-align:center; 
+            margin-top:60px; 
+            color:#7f8c8d; 
+            font-size:0.9rem; 
+        }
+
+        hr {
+            margin:40px 0;
+            border:none;
+            height:1px;
+            background:linear-gradient(to right, transparent, #ccc, transparent);
+        }
+
     </style>
 </head>
+
 <body>
 
 <div class="container">
-    <nav>
-    <a href="../../index.html">← Back to Syllabus</a> |
-    <a href="./index.html">Motion in 1D</a>
-</nav>
 
+    <nav class="top-nav">
+        <a href="../../index.html" class="back-btn">
+            <span>&larr;</span> Back to Syllabus
+        </a>
+    </nav>
 
-    <h1>Motion in One Dimension</h1>
-    <p style="text-align:center;">
-        <em>The first quantitative description of motion.</em>
+<h1>Motion in One Dimension</h1>
+<p class="subtitle">
+The first complete mathematical treatment of change.
+</p>
+
+<section>
+    <h2>Why This Chapter Matters</h2>
+
+    <p>
+        This is the first chapter where physics becomes fully operational.
+        Earlier chapters clarified structure and measurement.
+        Here, we begin applying mathematics to describe motion precisely.
     </p>
 
-    <section>
-        <h2>Chapter Overview</h2>
-        <p>
-            Motion in one dimension is the first formal step in mechanics.
-            In this chapter, we learn how to describe motion using space and time,
-            without worrying about the causes of motion.
-        </p>
+    <p>
+        We now define position as a function of time,
+        and from it derive velocity and acceleration.
+        Motion is no longer described qualitatively —
+        it is expressed through measurable relations.
+    </p>
+</section>
 
-        <p>
-            This chapter belongs to <strong>kinematics</strong> — the branch of
-            mechanics concerned only with describing motion, not explaining it.
-        </p>
+<section>
+    <h2>What This Chapter Does</h2>
 
-        <div class="insightbox">
-            Kinematics answers <em>how</em> objects move,
-            not <em>why</em> they move.
-        </div>
-    </section>
+    <ul>
+        <li>Defines motion relative to a frame of reference</li>
+        <li>Introduces displacement as a signed quantity</li>
+        <li>Defines velocity and acceleration rigorously</li>
+        <li>Connects algebraic equations with geometric graphs</li>
+        <li>Builds the standard equations of uniformly accelerated motion</li>
+    </ul>
+</section>
 
-    <section>
-        <h2>How to Study This Chapter</h2>
-        <ul>
-            <li>Focus on definitions and sign conventions</li>
-            <li>Understand graphs geometrically</li>
-            <li>Do not memorize equations without derivation</li>
-        </ul>
-    </section>
+<section>
+    <h2>Conceptual Position</h2>
 
-    <section>
-        <h2>Chapter Sections</h2>
+    <p>
+        This chapter belongs to <strong>kinematics</strong>.
+        Kinematics describes how motion occurs,
+        without yet discussing forces.
+    </p>
 
-        <div class="chapter-list">
-            <a href="./01-introduction.html">1. Why Motion and Mechanics?</a>
-            <a href="./02-frame-of-reference.html">2. Frame of Reference</a>
-            <a href="./03-position-displacement.html">3. Position, Distance & Displacement</a>
-            <a href="./04-speed-velocity.html">4. Speed and Velocity</a>
-            <a href="./05-acceleration.html">5. Acceleration</a>
-            <a href="./06-motion-graphs.html">6. Motion Graphs</a>
-            <a href="./07-equations-of-motion.html">7. Equations of Motion</a>
-            <a href="./08-relative-motion-1d.html">8. Relative Motion in One Dimension</a>
-        </div>
-    </section>
+    <p>
+        We are studying change itself —
+        not the cause of change.
+    </p>
+</section>
 
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+    <h2>How It Should Be Studied</h2>
+
+    <ul>
+        <li>Be strict with sign conventions</li>
+        <li>Interpret graphs geometrically</li>
+        <li>Understand derivations — avoid memorization</li>
+        <li>Relate equations to physical meaning</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Sections</h2>
+
+    <div class="chapter-list">
+        <a href="./01-introduction.html">1. Why Motion and Mechanics?</a>
+        <a href="./02-frame-of-reference.html">2. Frame of Reference</a>
+        <a href="./03-position-displacement.html">3. Position, Distance & Displacement</a>
+        <a href="./04-speed-velocity.html">4. Speed and Velocity</a>
+        <a href="./05-acceleration.html">5. Acceleration</a>
+        <a href="./06-motion-graphs.html">6. Motion Graphs</a>
+        <a href="./07-equations-of-motion.html">7. Equations of Motion</a>
+        <a href="./08-relative-motion-1d.html">8. Relative Motion in One Dimension</a>
+    </div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
 </div>
 
 </body>
