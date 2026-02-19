@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Motion in One Dimension | JEE Physics Notes</title>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style>
         :root { 
@@ -64,7 +74,6 @@
             background:linear-gradient(to right, transparent, #ddd, transparent);
         }
 
-        /* Navigation */
         .top-nav {
             margin-bottom:35px;
         }
@@ -92,7 +101,6 @@
             padding-left:20px;
         }
 
-        /* Chapter Cards */
         .chapter-list {
             margin-top:25px;
         }
@@ -144,18 +152,18 @@
             background:linear-gradient(to right, transparent, #ccc, transparent);
         }
 
-    </style>
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <nav class="top-nav">
-        <a href="../../index.html" class="back-btn">
-            <span>&larr;</span> Back to Syllabus
-        </a>
-    </nav>
+<nav class="top-nav">
+    <a href="../../index.html" class="back-btn">
+        <span>&larr;</span> Back to Syllabus
+    </a>
+</nav>
 
 <h1>Motion in One Dimension</h1>
 <p class="subtitle">
@@ -163,46 +171,72 @@ The first complete mathematical treatment of change.
 </p>
 
 <section>
-    <h2>Why This Chapter Matters</h2>
+    <h2>What Is This Chapter About?</h2>
 
     <p>
-        This is the first chapter where physics becomes fully operational.
-        Earlier chapters clarified structure and measurement.
-        Here, we begin applying mathematics to describe motion precisely.
+        This chapter is about motion — a naturally occurring phenomenon — something we observe every single day. In physics, the study of motion is called <b>Mechanics</b>. Motion is defined as change of position with time, as measured by an observer.
     </p>
 
     <p>
-        We now define position as a function of time,
-        and from it derive velocity and acceleration.
-        Motion is no longer described qualitatively —
-        it is expressed through measurable relations.
+        This chapter is mathematically intensive. The physical quantity <b>Position</b> is expressed as a function of another physical quantity, <b>Time</b>. Nearly everything learned in Functions and Calculus is now applied as a tool to describe physical change.
     </p>
 </section>
 
 <section>
-    <h2>What This Chapter Does</h2>
+    <h2>Why Is This Chapter Sequenced Here?</h2>
+
+    <p>
+        This is the first chapter in any general course on Mechanics because:
+    </p>
 
     <ul>
-        <li>Defines motion relative to a frame of reference</li>
-        <li>Introduces displacement as a signed quantity</li>
-        <li>Defines velocity and acceleration rigorously</li>
-        <li>Connects algebraic equations with geometric graphs</li>
-        <li>Builds the standard equations of uniformly accelerated motion</li>
+        <li><b>Quantitative Training:</b> It teaches how to describe motion using numbers and units instead of vague words.</li>
+
+        <li><b>The Calculus Playground:</b> It allows differentiation and integration to be applied to physical reality without the distraction of complex geometry.</li>
+
+        <li><b>Vector "Lite":</b> Motion along a straight line postpones the full load of 2D/3D vectors. In one dimension, a simple plus or minus sign carries directional information.</li>
+
+        <li><b>Description vs. Cause:</b> We focus strictly on <b>what</b> is happening, not <b>why</b>. The relation \( x = f(t) \) does not mean that time causes position. It expresses functional dependence, not causation.</li>
     </ul>
+
+    <p>
+        Mathematical description comes first. The study of causes (forces) comes later.
+    </p>
 </section>
 
 <section>
-    <h2>Conceptual Position</h2>
+    <h2>Why Mechanics Is Studied First</h2>
 
     <p>
-        This chapter belongs to <strong>kinematics</strong>.
-        Kinematics describes how motion occurs,
-        without yet discussing forces.
+        Everything in the physical world exists within the structural framework of <b>Space</b> and <b>Time</b>. Physics studies natural phenomena as changes of state, and those changes occur within this framework. For that reason, mechanics forms the foundation for every other branch of physics.
     </p>
 
     <p>
-        We are studying change itself —
-        not the cause of change.
+        The way we quantify change here becomes a universal language. Whether studying heat, light, electromagnetism or atoms later, the same structural logic of change will apply.
+    </p>
+
+    <p>
+        In general, change in any physical quantity (PQ) with respect to time is defined as:
+    </p>
+
+    \[
+    \Delta (PQ) = (PQ)_f - (PQ)_i
+    \]
+
+    <p>
+        where \( (PQ)_f \) and \( (PQ)_i \) are the values of the quantity at \( t = t_f \) and \( t = t_i \), respectively.
+    </p>
+
+    <p>
+        When a quantity varies with position instead of time, we write:
+    </p>
+
+    \[
+    \Delta (PQ) = (PQ)_2 - (PQ)_1
+    \]
+
+    <p>
+        Here we avoid using the words "initial" and "final" because time flows in one direction, whereas spatial points do not carry an inherent direction.
     </p>
 </section>
 
@@ -210,10 +244,13 @@ The first complete mathematical treatment of change.
     <h2>How It Should Be Studied</h2>
 
     <ul>
-        <li>Be strict with sign conventions</li>
-        <li>Interpret graphs geometrically</li>
-        <li>Understand derivations — avoid memorization</li>
-        <li>Relate equations to physical meaning</li>
+        <li><b>Pick a Side:</b> Choose a coordinate system intentionally and remain consistent.</li>
+
+        <li><b>Respect the Sign:</b> In one dimension, the sign (\( + \) or \( - \)) <b>is</b> the direction. Treat it as physical information, not merely a mathematical symbol.</li>
+
+        <li><b>Graphs are Geometry:</b> A curve is not just a picture. Its slope and area carry physical meaning. Learn to interpret graphs geometrically.</li>
+
+        <li><b>Ditch the Shortcuts:</b> Understand derivations as a source of formulas. Memorization without understanding, fails when faced with unfamiliar problems.</li>
     </ul>
 </section>
 
@@ -221,8 +258,8 @@ The first complete mathematical treatment of change.
     <h2>Chapter Sections</h2>
 
     <div class="chapter-list">
-        <a href="./01-introduction.html">1. Why Motion and Mechanics?</a>
-        <a href="./02-frame-of-reference.html">2. Frame of Reference</a>
+        <a href="./01-introduction.html">1. Organization of Mechanics</a>
+        <a href="./02-frame-of-reference.html">2. Observer vs. Frame of Reference</a>
         <a href="./03-position-displacement.html">3. Position, Distance & Displacement</a>
         <a href="./04-speed-velocity.html">4. Speed and Velocity</a>
         <a href="./05-acceleration.html">5. Acceleration</a>

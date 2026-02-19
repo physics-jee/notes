@@ -5,133 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motion in One Dimension | Introduction</title>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary:#2c3e50; --secondary:#2980b9; --accent:#3498db; --bg:#fdfdfd; }
-        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.7; background:var(--bg); color:#333; margin:0; padding:20px; }
-        .container { max-width:900px; margin:auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color:var(--primary); }
-        h1 { border-bottom:3px solid var(--secondary); padding-bottom:10px; text-align:center; }
-        h2 { border-left:5px solid var(--secondary); padding-left:15px; margin-top:40px; }
-        .insightbox { background:#ecf6fd; border-left:5px solid var(--secondary); padding:20px; margin:25px 0; border-radius:0 8px 8px 0; font-style:italic; }
-        nav a { text-decoration:none; color:var(--accent); font-weight:bold; }
-        footer { text-align:center; margin-top:50px; color:#7f8c8d; font-size:0.9rem; }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
+
 <body>
 
 <div class="container">
-    <nav>
-    <a href="../../index.html">← Back to Syllabus</a> |
-    <a href="./index.html">Motion in 1D</a>
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Motion in 1D
+    </a>
 </nav>
-    <h1>Motion in One Dimension</h1>
-    <p style="text-align:center;"><em>Why physics begins with motion.</em></p>
 
-    <section>
-        <h2>Why Do We Begin Physics with Mechanics?</h2>
+<h1>Organization of Mechanics</h1>
+<p class="subtitle">
+How the study of motion is structurally built.
+</p>
 
-        <p>
-            Physics seeks to understand the natural world through observation,
-            measurement, and logical laws. When we examine nature at its most
-            immediate and accessible level, one phenomenon stands out as the
-            most common, most directly experienced, and most universally observed:
-            <strong>motion</strong>.
-        </p>
+<section>
+    <h2>Why Mechanics is "Day One" for Physics</h2>
 
-        <p>
-            Motion is an inseparable part of everyday human experience. We walk,
-            run, and ride bicycles. Even during rest or sleep, motion does not
-            cease: air continuously moves into and out of our lungs, and blood
-            flows through arteries and veins.
-        </p>
+    <p>
+        Motion is easily the most pervasive thing we see in nature. Historically, humans actually associated movement with life itself—if something moved (like the Sun or the Moon), it was considered alive; if it was perfectly still, it was dead. 
+    </p>
+    
+    <p>
+        In modern physics, we start with mechanics because every single observable change in the physical world involves motion in some form. Even measuring your weight on a digital scale is technically "observing" a needle move to a specific position. Since the physical world is modeled using the four structural components of <b>Space, Time, Matter, and Energy</b>, we must first understand how matter occupies space over a sequence of time.
+    </p>
 
-        <p>
-            Motion is not confined to objects we can see and touch. The Earth
-            rotates about its axis and revolves around the Sun. The Sun itself
-            moves through the Milky Way galaxy. At every observable scale of
-            the universe, motion is present.
-        </p>
+    <div class="insightbox">
+        Physics begins with mechanics not because of tradition, but because you cannot describe a "natural phenomenon" (change) without first understanding the framework of space and time in which it occurs.
+    </div>
 
-        <p>
-            Because motion is so fundamental and so pervasive, understanding it
-            becomes the first logical step in understanding the universe itself.
-            Mechanics provides the basic language and laws required to describe
-            motion quantitatively.
-        </p>
+    <p>
+        Through mechanics, we learn the "universal language" of physics: how to take a qualitative experience (like "the car is fast") and turn it into a quantitative description (a numerical value and a unit).
+    </p>
+</section>
 
-        <div class="insightbox">
-            Physics begins with mechanics not by tradition,
-            but by necessity.
-        </div>
-    </section>
+<section>
+    <h2>The Three Pillars of Mechanics</h2>
 
-    <section>
-        <h2>What Is Motion?</h2>
+    <p>
+        We don't try to solve the whole universe at once. To keep our study organized and structurally sound, we divide mechanics into three distinct branches:
+    </p>
 
-        <p>
-            Motion is defined as the phenomenon in which the position of an object
-            changes with time.
-        </p>
+    <div class="model-box">
+        <ul>
+            <li><b>Kinematics:</b> The <i>description</i> of motion. We focus on <b>what</b> is happening (position, velocity, acceleration) without worrying about the causes.</li>
+            <li><b>Dynamics:</b> The study of the <i>causes</i> of motion. We ask <b>why</b> things move—introducing forces and energy.</li>
+            <li><b>Statics:</b> The study of <i>equilibrium</i>. We investigate systems where there is no net motion.</li>
+        </ul>
+    </div>
 
-        <p>
-            An object is said to be in a state of <strong>motion</strong> if it
-            continuously changes its position with respect to its surroundings
-            as time passes. Conversely, an object is said to be at
-            <strong>rest</strong> if its position does not change with respect
-            to its surroundings.
-        </p>
+    <p>
+        This chapter is strictly about <b>Kinematics</b>. We are learning how to describe the "dance" before we try to figure out what is pushing the dancers.
+    </p>
+</section>
+<section>
+    <h2>What is this "Description" exactly?</h2>
 
-        <p>
-            However, rest and motion are not absolute concepts. They are
-            <strong>relative</strong>.
-        </p>
+    <p>
+        In everyday life, we describe things with adjectives ("fast", "slow", "straight", "curvy"). In physics, description means defining <b>mathematical relations</b> between measurable quantities. 
+    </p>
 
-        <div class="insightbox">
-            Rest and motion are properties of
-            the object <em>and</em> the observer together.
-        </div>
-    </section>
+    <p>
+        For example, if we say a particle is moving in a circle, that is a purely <b>geometric (mathematical) description</b>. We don't care <i>why</i> it's moving that way—it could be a planet held by gravity or a stone on a string. The kinematics remains the same. We focus on the relation \( x = f(t) \), remembering that this expresses how position varies with time, not necessarily that "time" is the physical cause of the displacement.
+    </p>
 
-    <section>
-        <h2>Motion as the Study of Space and Time</h2>
+    <p>
+        Consider cricket. Saying someone is a "better batsman" is qualitative. To describe that claim properly, we introduce measurable parameters: batting average, strike rate, total runs scored. These numbers replace opinion with quantifiable evidence.
+    </p>
 
-        <p>
-            At its most fundamental level, the study of motion is the study of
-            <strong>space</strong> and <strong>time</strong>.
-        </p>
+    <p>
+        Physics works the same way. Instead of saying "the car is fast", we assign a measurable quantity speed:
+    </p>
 
-        <p>
-            For anything to exist meaningfully in physics, two questions must be
-            answerable:
-        </p>
+    \[
+    v = 28 \text{ m/s}
+    \]
 
-        <p style="text-align:center;">
-            <em>Where does it exist?</em> &nbsp;&nbsp; and &nbsp;&nbsp;
-            <em>When does it exist?</em>
-        </p>
+    <p>
+        Description in physics means defining measurable quantities that capture observable behavior. It does not explain why something happens. It is just encoding natural phenomenon in mathematical form.
+    </p>
 
-        <p>
-            Motion arises naturally when the position of an object in space
-            changes with time. Thus, motion is not an extra feature imposed on
-            nature—it is a direct consequence of describing existence using
-            space and time.
-        </p>
+    <p>
+        In mechanics, the central act of description is defining
+        how position depends on time:
+    </p>
 
-        <div class="insightbox">
-            Kinematics begins by assigning positions
-            as functions of time.
-        </div>
-    </section>
+    \[
+    x = f(t), \quad 
+    v = \frac{dx}{dt}, \quad 
+    a = \frac{d^2x}{dt^2}
+    \]
 
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+    <p>
+        These relations transform motion from a qualitative experience into a structured mathematical object.
+    </p>
+</section>
+
+<section>
+    <h2>Kinematics vs. Dynamics: What Is Invisible?</h2>
+
+    <p>
+        Suppose we observe that a particle has an acceleration toward the right:
+    </p>
+
+    \[
+    a = +2 \text{ m/s}^2
+    \]
+
+    <p>
+        In <b>kinematics</b>, this is sufficient. We describe the motion: the acceleration is directed to the right. Nothing more is required.
+    </p>
+
+    <p>
+        We do not ask whether the particle is being pushed from behind, pulled from the front, attracted by gravity, or driven by an engine. All such mechanisms are <b>invisible</b> at the level of kinematics.
+    </p>
+
+    <p>
+        <b>Dynamics</b>, however, makes the invisible visible. It asks: What interaction is producing this acceleration? What force is responsible? Why is the acceleration having that magnitude and direction.
+    </p>
+
+    <p>
+        The same acceleration could arise from many different causes: a push, a pull, tension in a rope, gravitational attraction, or electrical interaction. Kinematics treats them identically. Dynamics distinguishes between them.
+    </p>
+
+    <p>
+        Thus, kinematics describes <i>how</i> motion occurs, while dynamics explains <i>why</i> it occurs.
+    </p>
+</section>
+<section>
+    <h2>Levels of Increasing Complexity</h2>
+
+    <p>
+        Motion appears in countless forms—rectilinear (straight line), curvilinear (curves), translational, rotational, periodic, oscillatory etc. Each type requires a different level of mathematical sophistication. As a result, we follow a logical ladder:
+    </p>
+
+    <p style="text-align:center; font-weight:bold;">
+        1D Motion (Straight Line) &rarr; 2D Motion (Planes) &rarr; 3D Motion (Space)
+    </p>
+
+    <p>
+        We begin with <b>One-Dimensional Motion</b> because it isolates the core concepts: position, velocity and acceleration and makes them prominent for study. It allows us to practice calculus without the heavy geometric and trigonometric load of 2D or 3D vectors. In 1D, a simple plus (+) or minus (-) sign carries all the directional information you need.
+    </p>
+    
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
 </div>
 
 </body>
