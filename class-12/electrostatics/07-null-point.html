@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Null Points and Equilibrium</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Null Points and Equilibrium Analysis</h1>
+    <p class="subtitle">
+        Locating regions of zero field and analyzing the stability of charge systems.
+    </p>
+
+    <section>
+        <h2>What are Null Points and Equilibrium?</h2>
+        <p>
+            A <strong>Null Point</strong> (or neutral point) is a specific location in space where the net electric field created by a system of charges is exactly zero (\(\vec{E}_{\text{net}} = 0\)). Consequently, any test charge placed exactly at this point will experience zero net electrostatic force.
+        </p>
+        <p>
+            <strong>Equilibrium</strong> refers to the mechanical state of a charge when the net force acting on it is zero. While placing a charge at a null point guarantees equilibrium, the critical physics lies in analyzing the <em>nature</em> of that equilibrium: will the charge return to the null point if slightly disturbed (stable), or will it fly away (unstable)?
+        </p>
+        
+    </section>
+
+    <section>
+        <h2>How do we locate a Null Point?</h2>
+        <p>
+            For a system of two point charges \(q_1\) and \(q_2\) separated by a distance \(d\), the location of the null point depends entirely on the signs and relative magnitudes of the charges. Let \(x\) be the distance of the null point from the smaller charge \(q_1\).
+        </p>
+
+        <h3>Case 1: Like Charges (Same Sign)</h3>
+        <p>
+            If both charges are positive or both are negative, their electric fields oppose each other in the region <em>between</em> them. The null point always lies on the line joining them, exactly between the charges, and closer to the charge with the smaller magnitude.
+        </p>
+        \[\frac{1}{4\pi\varepsilon_0} \frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0} \frac{q_2}{(d - x)^2}\]
+        \[x = \frac{d}{\sqrt{\frac{q_2}{q_1}} + 1}\]
+
+        <h3>Case 2: Unlike Charges (Opposite Signs)</h3>
+        <p>
+            If one charge is positive and the other is negative, their fields point in the same direction between them, meaning they can never cancel out there. The null point must lie on the extended line joining them, <em>outside</em> the charges, on the side of the charge with the smaller magnitude.
+        </p>
+        \[\frac{1}{4\pi\varepsilon_0} \frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0} \frac{q_2}{(d + x)^2}\]
+        \[x = \frac{d}{\sqrt{\frac{q_2}{q_1}} - 1}\]
+        <div class="insightbox">
+            <strong>Shortcut:</strong> For unlike charges of <em>equal</em> magnitude (an electric dipole), the denominator becomes zero, meaning \(x \to \infty\). An ideal dipole has no finite null point.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we analyze the Nature of Equilibrium?</h2>
+        <p>
+            To determine if an equilibrium state is stable, unstable, or neutral, we mathematically or conceptually displace the test charge by a small distance \(dx\) and analyze the resulting net force.
+        </p>
+        
+
+        <ul>
+            <li><strong>Stable Equilibrium:</strong> If displaced, a restoring force arises that pushes the charge back toward the null point. The potential energy \(U\) is at a local minimum (\(\frac{d^2U}{dx^2} > 0\)). In JEE problems, this setup often leads to Simple Harmonic Motion (SHM) for small displacements.</li>
+            <li><strong>Unstable Equilibrium:</strong> If displaced, the net force pushes the charge further away from the null point. The potential energy \(U\) is at a local maximum (\(\frac{d^2U}{dx^2} < 0\)).</li>
+            <li><strong>Neutral Equilibrium:</strong> If displaced, the net force remains zero. The charge simply stays in its new position (\(\frac{d^2U}{dx^2} = 0\)).</li>
+        </ul>
+
+        <h3>Application: Charge Between Two Identical Source Charges</h3>
+        <p>
+            Consider two fixed positive charges \(+Q\) separated by distance \(2a\). A third charge \(q\) is placed at the exact midpoint (the null point).
+        </p>
+        <p>
+            If \(q\) is <strong>positive</strong>: 
+            Displacing it along the axis creates a restoring force (Stable). Displacing it perpendicular to the axis pushes it away (Unstable).
+        </p>
+        <p>
+            If \(q\) is <strong>negative</strong>: 
+            Displacing it along the axis pulls it toward a source charge (Unstable). Displacing it perpendicular to the axis creates a restoring force pulling it back to the axis (Stable).
+        </p>
+    </section>
+
+    <section>
+        <h2>Exceptions: Earnshaw's Theorem</h2>
+        <p>
+            When analyzing equilibrium in electrostatics, there is a profound theoretical limitation that must be specified.
+        </p>
+        <p>
+            <strong>Earnshaw's Theorem</strong> states that a collection of point charges cannot be maintained in a stable stationary equilibrium configuration solely by the electrostatic interaction of the charges. 
+        </p>
+        <p>
+            While a charge might be stable against displacements along a specific axis (as seen in the example above), it will always be unstable against displacements in at least one other orthogonal direction in 3D space. 
+        </p>
+        <div class="insightbox">
+            <strong>Exception applied:</strong> True 3D stable equilibrium requires other forces. You can never perfectly trap a charge in an electrostatic "bowl" in empty space without incorporating external mechanical forces, quantum mechanics, or dynamic (moving) magnetic fields.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

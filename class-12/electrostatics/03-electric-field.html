@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Electric Field</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Electric Field</h1>
+    <p class="subtitle">
+        The modification of space that mediates electrostatic interactions.
+    </p>
+
+    <section>
+        <h2>What is an Electric Field?</h2>
+        <p>
+            Coulomb's Law describes a force acting across empty space between two charges. However, this "action-at-a-distance" concept is philosophically and physically incomplete. The modern perspective introduces the <strong>Electric Field</strong>.
+        </p>
+        <p>
+            An electric field is a fundamental property of space itself, created by the presence of a source charge. The source charge modifies the space around it, and when a second charge (a test charge) is placed in this space, it interacts directly with the local field, not instantaneously with the distant source charge.
+        </p>
+        <div class="insightbox">
+            The electric field is not merely a mathematical abstraction; it is a real, physical entity that can store energy and transmit momentum.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we define and calculate the field?</h2>
+        <p>
+            Mathematically, the electric field \(\vec{E}\) at a specific point in space is defined as the electrostatic force \(\vec{F}\) experienced by a vanishingly small positive test charge \(q_0\) placed at that point, divided by the magnitude of the test charge.
+        </p>
+        \[\vec{E} = \lim_{q_0 \to 0} \frac{\vec{F}}{q_0}\]
+        <p>
+            The SI unit for electric field is Newtons per Coulomb (\(\text{N/C}\)) or Volts per meter (\(\text{V/m}\)).
+        </p>
+        
+        
+
+        <h3>Field due to a Point Charge</h3>
+        <p>
+            Using Coulomb's Law, the force on a test charge \(q_0\) at position \(\vec{r}\) due to a source charge \(q\) at the origin is \(\vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{q q_0}{r^2} \hat{r}\). Dividing by \(q_0\), we get the electric field of a point charge:
+        </p>
+        \[\vec{E} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^3} \vec{r}\]
+        <p>
+            Notice that the electric field depends <em>only</em> on the source charge \(q\) and the position coordinates. It is completely independent of the test charge \(q_0\).
+        </p>
+    </section>
+
+    <section>
+        <h2>Superposition and Continuous Charge Distributions</h2>
+        <p>
+            Because force obeys the superposition principle, the electric field also obeys it. The net electric field at a point due to a system of discrete point charges is the vector sum of the individual fields:
+        </p>
+        \[\vec{E}_{\text{net}} = \sum_{i=1}^{n} \vec{E}_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)\]
+
+        <p>
+            For extended macroscopic bodies (the "Coulomb World" integration approach), we cannot use discrete summation. We must treat the charge distribution as continuous, breaking the body into infinitesimal charge elements \(dq\). The total field is found by integrating:
+        </p>
+        \[\vec{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{dq}{r^2} \hat{r}\]
+
+        
+
+        <p>
+            Depending on the geometry of the body, \(dq\) is expressed using charge densities:
+        </p>
+        <ul>
+            <li><strong>Linear Charge Density (\(\lambda\)):</strong> For a wire or ring, \(dq = \lambda \, dl\)</li>
+            <li><strong>Surface Charge Density (\(\sigma\)):</strong> For a sheet or disc, \(dq = \sigma \, dA\)</li>
+            <li><strong>Volume Charge Density (\(\rho\)):</strong> For a solid sphere or cylinder, \(dq = \rho \, dV\)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exceptions and Theoretical Nuances</h2>
+        <p>
+            When applying the electric field concept, especially in advanced JEE problems, certain boundary conditions and nuances must be strictly observed:
+        </p>
+        <ul>
+            <li><strong>The Test Charge Limit:</strong> Why do we require \(q_0 \to 0\)? If the test charge has a substantial magnitude, its own electric field will exert forces on the source charges, potentially moving them and altering the very field we are trying to measure. <em>Exception:</em> If the source charges are mechanically fixed in place, the size of the test charge does not matter.</li>
+            <li><strong>Field Inside Conductors:</strong> In electrostatics (charges at rest), the electric field strictly inside the material of a solid macroscopic conductor is always exactly zero (\(\vec{E} = 0\)). If a field existed, free electrons would move, violating the condition of electrostatics.</li>
+            <li><strong>Singularities:</strong> The formula \(\vec{E} \propto 1/r^2\) implies the field becomes infinitely large exactly at \(r = 0\) (the location of a point charge). In classical physics, this is a singularity. In reality, perfectly dimension-less point charges do not exist; fundamental particles have quantum mechanical constraints that prevent infinite energies.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E inside Cavity of Uniformly Charged Sphere | JEE Physics Notes</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<nav class="top-nav">
+    <a href="./01-gauss-law.html" class="back-btn">
+        <span>&larr;</span> Back to AGL
+    </a>
+</nav>
+
+<h1>Electric Field inside Cavity of Uniformly Charged Sphere</h1>
+<p class="subtitle">
+Using superposition principle
+</p>
+
+<section>
+
+<h2>Problem Setup</h2>
+
+<p>
+A non-conducting solid sphere of radius <strong>R</strong> has uniform volume charge density \( \rho \). A spherical cavity of radius <strong>r</strong> is carved out, whose center is displaced from the center of the original sphere by vector \( \vec{a} \).
+</p>
+
+<p>
+Find the electric field at any point inside the cavity.
+</p>
+<hr>
+<h3>Geometric Setup for Superposition</h3>
+
+<div style="position:relative; width:650px; margin:auto;">
+<svg width="650" height="400" viewBox="0 0 650 400"
+     style="background:#f9fbfd; border-radius:10px;">
+
+  <!-- Big sphere -->
+  <circle cx="300" cy="200" r="160"
+          stroke="#d9534f"
+          stroke-width="3"
+          fill="none"/>
+
+  <!-- Cavity -->
+  <circle cx="390" cy="200" r="70"
+          stroke="#d9534f"
+          stroke-width="3"
+          fill="none"/>
+
+  <!-- Centers -->
+  <circle cx="300" cy="200" r="4" fill="#333"/>
+  <text x="285" y="220" font-size="16">C</text>
+
+  <circle cx="390" cy="200" r="4" fill="#333"/>
+  <text x="380" y="220" font-size="16">C′</text>
+
+  <!-- Vector a -->
+  <line x1="300" y1="200" x2="390" y2="200"
+        stroke="#000"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+  <text x="340" y="215" font-size="16">a</text>
+
+  <!-- Point P -->
+  <circle cx="420" cy="170" r="4" fill="#000"/>
+  <text x="430" y="165" font-size="16">P</text>
+
+  <!-- r1 vector -->
+  <line x1="300" y1="200" x2="420" y2="170"
+        stroke="#000"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <text x="350" y="180" font-size="16">r₁</text>
+
+  <!-- r2 vector -->
+  <line x1="390" y1="200" x2="420" y2="170"
+        stroke="#000"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <text x="410" y="195" font-size="16">r₂</text>
+
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="8" refY="3"
+            orient="auto"
+            markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+    </marker>
+
+  </defs>
+
+</svg>
+</div>
+<hr>
+
+<h3>Step 1: Use Superposition</h3>
+
+<p>
+The configuration can be treated as:
+</p>
+
+<ul>
+<li>A complete uniformly charged sphere of density \( \rho \)</li>
+<li>Plus a smaller sphere of density \( -\rho \) placed at the cavity center</li>
+</ul>
+
+<p>
+(The cavity is equivalent to adding negative charge density.)
+</p>
+
+<hr>
+
+<h3>Step 2: Field due to a Uniformly Charged Solid Sphere</h3>
+
+<p>
+Inside a uniformly charged solid sphere,
+</p>
+
+\[
+\vec{E} = \frac{\rho}{3\varepsilon_0} \vec{r}
+\]
+
+<p>
+where \( \vec{r} \) is position vector from the center of that sphere.
+</p>
+
+<hr>
+
+<h3>Step 3: Field at Point P inside Cavity</h3>
+
+<p>
+Let:
+</p>
+
+<ul>
+<li>\( \vec{r}_1 \) = position vector of point P from center of big sphere</li>
+<li>\( \vec{r}_2 \) = position vector of point P from center of cavity</li>
+<li>\( \vec{a} \) = displacement vector from big sphere center to cavity center</li>
+</ul>
+
+Then geometrically,
+
+\[
+\vec{r}_1 = \vec{a} + \vec{r}_2
+\]
+
+<hr>
+
+<h3>Step 4: Apply Superposition</h3>
+
+Field due to full sphere:
+
+\[
+\vec{E}_1 = \frac{\rho}{3\varepsilon_0} \vec{r}_1
+\]
+
+Field due to negative sphere:
+
+\[
+\vec{E}_2 = \frac{\rho}{3\varepsilon_0} \vec{r}_2
+\]
+
+Net field inside cavity:
+
+\[
+\vec{E} = \vec{E}_1 - \vec{E}_2
+\]
+
+\[
+\vec{E}
+=
+\frac{\rho}{3\varepsilon_0} (\vec{r}_1 - \vec{r}_2)
+\]
+
+Substitute \( \vec{r}_1 = \vec{a} + \vec{r}_2 \):
+
+\[
+\vec{E}
+=
+\frac{\rho}{3\varepsilon_0} \vec{a}
+\]
+
+<hr>
+
+<h2>Final Result</h2>
+
+\[
+\boxed{
+\vec{E}
+=
+\frac{\rho}{3\varepsilon_0} \vec{a}
+}
+\]
+
+<p>
+The electric field inside the cavity is:
+</p>
+
+<ul>
+<li>Uniform (same magnitude and direction at every point inside the cavity).</li>
+<li>Directed along \( \vec{a} \) (from the center of the original sphere to the center of the cavity).</li>
+<li>Independent of the position of point \( P \) inside the cavity.</li>
+<li>Dependent only on the displacement vector \( \vec{a} \), and <strong>independent of the cavity radius</strong>.</li>
+<li>If the cavity is concentric (\( \vec{a} = 0 \)), then \( \vec{E} = 0 \).</li>
+</ul>
+
+
+<hr>
+
+<h3>Structural Insight</h3>
+
+<ul>
+<li>The linear dependence \( \vec{E} \propto \vec{r} \) inside a uniform sphere is the key.</li>
+<li>Subtracting two linear fields produces a constant field.</li>
+<li>This result holds only because density is uniform.</li>
+<li>For non-uniform \( \rho(r) \), field in cavity is not uniform.</li>
+</ul>
+
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

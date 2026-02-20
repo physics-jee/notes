@@ -1,101 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Electrostatics</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrostatics | JEE Physics Notes</title>
+<script src="./assets/js/math.js"></script>
+<style>
+        :root { 
+            --primary:#2c3e50; 
+            --secondary:#2980b9; 
+            --accent:#3498db; 
+            --bg:#f4f7fa; 
         }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
+        body { 
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height:1.7; 
+            background:var(--bg); 
+            color:#333; 
+            margin:0; 
+            padding:30px; 
         }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        .container { 
+            max-width:950px; 
+            margin:auto; 
+            background:#fff; 
+            padding:50px; 
+            border-radius:16px; 
+            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
         }
 
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
+        h1, h2 { color:var(--primary); }
+
+        h1 { 
+            border-bottom:3px solid var(--secondary); 
+            padding-bottom:12px; 
+            text-align:center; 
+            margin-bottom:10px;
         }
 
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
+        .subtitle {
+            text-align:center;
+            opacity:0.7;
+            margin-bottom:35px;
+            font-size:0.95rem;
         }
 
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
+        h2 { 
+            margin-top:40px; 
+            margin-bottom:15px;
         }
 
-        .points-list {
-            padding-left: 20px;
+        section {
+            margin-bottom:40px;
         }
 
-        nav {
-            margin-bottom: 20px;
+        section:not(:last-of-type)::after {
+            content:"";
+            display:block;
+            height:1px;
+            margin-top:40px;
+            background:linear-gradient(to right, transparent, #ddd, transparent);
         }
 
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
+        .top-nav {
+            margin-bottom:35px;
         }
-    </style>
+
+        .back-btn {
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:8px 14px;
+            background:#eef5fb;
+            border-radius:8px;
+            font-weight:600;
+            text-decoration:none;
+            color:var(--primary);
+            transition:all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background:#dcecf9;
+            transform:translateX(-3px);
+        }
+
+        ul {
+            margin-top:10px;
+            padding-left:20px;
+        }
+
+        .chapter-list {
+            margin-top:25px;
+        }
+
+        .chapter-list a {
+            display:block;
+            padding:18px 20px;
+            margin-bottom:15px;
+            background:#f9fbfd;
+            border-left:5px solid var(--secondary);
+            border-radius:10px;
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            transition:all 0.25s ease;
+            position:relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position:absolute;
+            right:20px;
+            opacity:0.4;
+            transition:all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background:#eef5fb;
+            transform:translateY(-3px);
+            box-shadow:0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity:1;
+            right:15px;
+        }
+
+        footer { 
+            text-align:center; 
+            margin-top:60px; 
+            color:#7f8c8d; 
+            font-size:0.9rem; 
+        }
+
+        hr {
+            margin:40px 0;
+            border:none;
+            height:1px;
+            background:linear-gradient(to right, transparent, #ccc, transparent);
+        }
+
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-        <h1>Electrostatics</h1>
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>Electrostatics is the study of electric charges at rest. It covers the forces, fields, and potentials
-                associated with stationary charges and charge distributions.</p>
-        </section>
-        <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ F = k\frac{q_1 q_2}{r^2}, \quad E = \frac{F}{q}, \quad V = k\frac{q}{r} \]
-            </div>
-        </section>
-        <section>
-            <h2>Key Discussion Points</h2>
-            <ul class="points-list">
-                <li>Coulomb's Law: Force between two point charges in vacuum and media.</li>
-                <li>Electric field lines: Properties and mapping of fields.</li>
-                <li>Electric potential and potential energy for systems of point charges.</li>
-                <li>Equipotential surfaces and their relationship with electric fields.</li>
-            </ul>
-        </section>
-    </div>
-</body>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Electrostatics</h1>
+<p class="subtitle">
+The first complete mathematical formulation of the concept of field.
+</p>
 
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Electrostatics studies electric charges at rest and the physical quantities associated with them — force, electric field, and electric potential. It marks the transition in physics from describing interactions as direct action-at-a-distance to describing them through a field that exists throughout space.
+</p>
+<p>
+Instead of saying that one charge directly pulls another, electrostatics introduces the idea that a charge modifies the space around it. That modification is the electric field.
+</p>
+</section>
+
+<section>
+<h2>Field as the Central Idea</h2>
+<p>
+The core concept of electrostatics is the electric field. A field assigns a physical quantity to every point in space. Unlike matter, which is localized, a field is distributed continuously throughout space.
+</p>
+<p>
+Matter carries intrinsic properties such as mass or charge. A field carries measurable parameters such as electric field strength and potential. Both matter and field can store energy, and both influence the evolution of physical systems.
+</p>
+<p>
+Electrostatics is therefore not merely the study of charges, but the first systematic mathematical theory of a physical field.
+</p>
+</section>
+<section>
+<h2>Field Strength and Potential</h2>
+<p>
+In mechanics, force is a vector quantity while energy is a scalar quantity.
+They describe the same physical system from different perspectives:
+force determines how motion changes locally, while energy provides a global measure of the system.
+</p>
+<p>
+Electrostatics exhibits a similar dual description. The electric field \( \vec{E} \) is a vector quantity that determines the force on a charge at a point. The electric potential \( V \) is a scalar quantity that encodes the same field information in an integrated form.
+</p>
+\[
+\vec{E} = - \nabla V
+\]
+<p>
+Thus, potential is not a separate physical entity; it is another mathematical representation of the same field.
+</p>
+<p>
+Visually, \( \vec{E} \) is represented by field lines, while \( V \) is represented by equipotential surfaces. Together, they provide complementary descriptions of the electric field.
+</p>
+</section>
+<section>
+<h2>Coulomb’s Law and Gauss’ Law</h2>
+<p>
+Coulomb’s law and Gauss’ law are two complementary formulations of electrostatics. Both describe the same electric field, but they approach it from different perspectives.
+</p>
+<hr>
+<h3>Coulomb’s Law: Field from Source Elements</h3>
+<p>
+Coulomb’s law gives the electric field produced by a point charge:
+</p>
+\[
+\vec{E} = \frac{1}{4\pi\varepsilon_0}
+\frac{q}{r^2}\,\hat{r}
+\]
+<p>
+For extended charge distributions, the total field is obtained using superposition:
+</p>
+\[
+\vec{E} = \frac{1}{4\pi\varepsilon_0}
+\int \frac{dq}{r^2}\,\hat{r}
+\]
+<p>
+Thus, Coulomb’s law builds the field by summing contributions from individual charge elements.
+</p>
+<hr>
+<h3>Gauss’ Law: Field from Flux</h3>
+<p>
+Gauss’ law relates the electric flux through a closed surface to the total charge enclosed:
+</p>
+\[
+\oint \vec{E} \cdot d\vec{S}
+=
+\frac{Q_{\text{enc}}}{\varepsilon_0}
+\]
+<p>
+It does not directly give the field at a point. Instead, it provides a global constraint on how the field flows through space. When strong symmetry is present, this constraint allows direct determination of \( \vec{E} \).
+</p>
+<hr>
+<h3>Relationship Between the Two</h3>
+<ul>
+<li>Coulomb’s law constructs the field locally from charge elements.</li>
+<li>Gauss’ law describes how the field behaves globally.</li>
+<li>In fact, Gauss’ law can be derived from Coulomb’s law using calculus.</li>
+<li>Both are consistent descriptions of the same physical field.</li>
+</ul>
+<p>
+Coulomb’s law emphasizes the inverse-square nature of interaction. Gauss’ law emphasizes the geometric structure of the field.
+</p>
+</section>
+<section>
+<h2>Organisation of Field and Potential</h2>
+<p>
+Electrostatics develops in two distinct structural layers:
+</p>
+<hr>
+<h3>I. Direct Integration (Coulomb World)</h3>
+<p>
+We begin with Coulomb’s law and the principle of superposition. Electric field and potential are obtained by integrating contributions  from infinitesimal charge elements \( dq \).
+</p>
+<p>
+This method is used for:
+</p>
+<ul>
+<li>Point charge and discrete systems of charges</li>
+<li>Finite straight rod</li>
+<li>Circular ring (field on axis, zero field at center)</li>
+<li>Arc (field at center)</li>
+<li>Long straight wire</li>
+<li>Circular disc (axis)</li>
+<li>Annular disc (superposition of discs)</li>
+<li>Infinite sheet</li>
+<li>Spherical cap (at center)</li>
+</ul>
+<p>
+Here, symmetry helps reduce components, but integration is essential.
+</p>
+<hr>
+<h3>II. Symmetry-Based Method (Gauss World)</h3>
+<p>
+When charge distributions possess strong symmetry (planar, cylindrical, or spherical), Gauss' law allows direct determination of the electric field without performing explicit integration.
+</p>
+<p>
+This becomes especially powerful for volume charge densities:
+</p>
+<ul>
+<li>Uniformly charged solid sphere</li>
+<li>Non-uniform spherical distributions \( \rho(r) \)</li>
+<li>Spherical shell</li>
+<li>Infinite cylinder (solid and hollow)</li>
+<li>Infinite thick sheet</li>
+</ul>
+<p>
+Gauss’ law does not replace Coulomb’s law. It accelerates computation when symmetry determines the structure of \( \vec{E} \).
+</p>
+<hr>
+<h3>Structural Insight</h3>
+<ul>
+<li>Coulomb’s law builds the field from pieces.</li>
+<li>Gauss’ law reveals how symmetry organises the field globally.</li>
+<li>Both describe the same physics.</li>
+</ul>
+</section>
+<section>
+<h2>Core Topics</h2>
+
+<ul class="points-list">
+    <li><strong>Coulomb’s Law</strong> — Inverse-square interaction between point charges; foundation of electrostatic force.</li>
+    <li><strong>Electric Field</strong> — Definition, superposition principle, and visualization through field lines.</li>
+    <li><strong>Electric Potential</strong> — Scalar description of the field and its relation to energy.</li>
+    <li><strong>Equipotential Surfaces</strong> — Geometric representation of constant potential and their relation to \( \vec{E} \).</li>
+    <li><strong>Gauss’ Law</strong> — Symmetry-based method for determining electric fields.</li>
+</ul>
+
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-properties-of-charge.html">1. Nature and Properties of Electric Charge</a>
+<a href="./02-coulomb-law.html">2. Coulomb’s Law and Superposition Principle</a>
+<a href="./03-electric-field.html">3. Electric Field</a>
+<a href="./04-potential-energy.html">4. Electric Potential and Potential Energy</a>
+<a href="./05-field-lines-and-surfaces.html">5. Field Lines and Equipotential Surfaces</a>
+<a href="./06-dipole.html">6. Electric Dipole</a>
+<a href="./07-null-point.html">7. Null Points and Equilibrium Analysis</a>
+<a href="./01-gauss-law.html">8. Field and Potential of Charge Distributions</a>
+<a href="./01-gauss-law.html">9. Electric Flux and Gauss’ Law</a>
+<a href="./01-gauss-law.html">10. Volume Charge Distributions</a>
+<a href="./01-gauss-law.html">11. Conductors and Cavities</a>
+<a href="./01-gauss-law.html">12. Potential of Concentric Spherical Shells</a>
+<a href="./01-gauss-law.html">13. Parallel Plate System and Uniform Fields</a>
+<a href="./01-gauss-law.html">14. Electrostatic Pressure</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
 </html>

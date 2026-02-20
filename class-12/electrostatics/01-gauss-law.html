@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Application of Gauss Law | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+        .chapter-list {
+            margin-top:25px;
+        }
+
+        .chapter-list a {
+            display:block;
+            padding:18px 20px;
+            margin-bottom:15px;
+            background:#f9fbfd;
+            border-left:5px solid var(--secondary);
+            border-radius:10px;
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            transition:all 0.25s ease;
+            position:relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position:absolute;
+            right:20px;
+            opacity:0.4;
+            transition:all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background:#eef5fb;
+            transform:translateY(-3px);
+            box-shadow:0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity:1;
+            right:15px;
+        }
+</style>
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Electrostatics
+    </a>
+</nav>
+
+<h1>Application of Gauss Law (AGL)</h1>
+<p class="subtitle">
+Gauss Law is fundamental on its own but needs symmetry for applicability
+</p>
+<section>
+<h2>Electric Field of a Uniformly Charged Spherical Shell</h2>
+<p>
+Consider a spherical shell of radius <strong>R</strong> carrying total charge <strong>Q</strong> uniformly distributed over its surface.
+</p>
+<hr>
+<h3>Step 1: Symmetry of the Charge Distribution</h3>
+<p>
+The charge distribution is spherically symmetric. This means:
+</p>
+<ul>
+<li>The system looks identical under any rotation about the center.</li>
+<li>No direction in space is preferred.</li>
+<li>All points at the same distance \( r \) from the center are physically equivalent.</li>
+</ul>
+<p>
+Because the laws of electrostatics respect spatial symmetry, the electric field must inherit this symmetry.
+</p>
+<hr>
+<h3>Step 2: What Symmetry Forces on \( \vec{E} \)</h3>
+<p>From spherical symmetry, we conclude:</p>
+<ul>
+<li>\( \vec{E} \) cannot have any tangential component.</li>
+<li>\( \vec{E} \) must be radial.</li>
+<li>The magnitude \( |\vec{E}| \) can depend only on the distance \( r \), not on angular position.</li>
+</ul>
+<p>
+Therefore,
+</p>
+
+\[
+\vec{E}(r) = E(r)\,\hat{r}
+\]
+<p>
+This conclusion is obtained <strong>before</strong> applying Gauss Law and both steps combined together are called as <b>symmetry argument due spherical distribution</b>. It will be used further for all spherical cases and is very strong tool. 
+</p>
+<hr>
+<h3>Step 3: Application of Gauss Law</h3>
+<p>
+Now choose a spherical Gaussian surface of radius \( r \). Since \( |\vec{E}| \) is constant over this surface and \( \vec{E} \) is parallel to \( d\vec{S} \), the surface integral simplifies:
+</p>
+
+\[
+\oint \vec{E} \cdot d\vec{S}
+=
+E(r) \oint dS
+=
+E(r)\,(4\pi r^2)
+\]
+
+<p>
+This simplification is possible only because of the symmetry established earlier.
+</p>
+
+\[
+E(r)\,(4\pi r^2) = \frac{Q_{\text{enclosed}}}{\varepsilon_0}
+\]
+<hr>
+<h3>Case I: \( r \lt R \)</h3>
+
+\[
+Q_{\text{enclosed}} = 0
+\]
+
+\[
+E(r) = 0
+\]
+<hr>
+<h3>Case II: \( r \gt R \)</h3>
+
+\[
+Q_{\text{enclosed}} = Q
+\]
+
+\[
+E(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{r^2}
+\]
+
+\[
+\vec{E}(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{r^2}\,\hat{r}
+\]
+<hr>
+<h4>Field at \( r = R \)</h4>
+
+  <ul>
+    <li>\( \lim_{r \to R^-} E = 0 \)</li>
+    <li>\(  \lim_{r \to R^+} \displaystyle E = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^2} \)</li>
+  </ul>
+
+<p>
+The electric field is discontinuous at the surface \( r = R \). The limiting values from inside and outside are different. Therefore, the field at exactly \( r = R \) is not uniquely defined.
+</p>
+<hr>
+<h3>Structural Insight</h3>
+<p>
+Gauss Law alone gives:
+</p>
+\[
+\oint \vec{E} \cdot d\vec{S} = \frac{Q_{\text{enclosed}}}{\varepsilon_0}
+\]
+<p>
+But without symmetry, the integral cannot be simplified. Symmetry determines the form of \( \vec{E} \). Gauss Law then determines its magnitude.
+</p>
+</section>
+<hr>
+<section>
+<h2>Electric Potential of a Uniformly Charged Spherical Shell</h2>
+<h3>(a) For \( r \ge R \)</h3>
+<p>
+We use the concept that outside the sphere, the spherical charge distribution behaves like a point charge at the center. So, the formula for potential is same as that of a point charge. This is true only for outside points.
+</p> 
+  \[
+  V(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{r}
+  \]
+
+  <h3>(b) For \( r \le R \)</h3>
+
+  <p>
+    Since the electric field inside is zero, potential remains constant:
+  </p>
+
+  \[
+  V(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{R}
+  \]
+
+  <h4>Continuity at \( r = R \)</h4>
+
+  \[
+  V(R^-) = V(R^+) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{R}
+  \]
+
+  <p>
+    The potential is continuous at the surface, but its derivative changes abruptly. Since
+  </p>
+
+  \[
+  \vec{E} = -\nabla V
+  \]
+
+  <p>
+    the discontinuity in the derivative of potential produces the jump in the electric field.
+  </p>
+<hr>
+<h3>Graph: Electric Field vs Distance</h3>
+<div style="position:relative; width:600px;">
+<svg width="600" height="300" viewBox="0 0 600 300" style="background:#f9fbfd; border-radius:8px;">
+
+  <!-- Axes -->
+  <line x1="50" y1="250" x2="550" y2="250" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="250" stroke="#333" stroke-width="2"/>
+
+  <!-- R marker -->
+  <line x1="250" y1="250" x2="250" y2="80" stroke="#888" stroke-dasharray="5,5"/>
+  <text x="240" y="270" font-size="14">R</text>
+
+  <!-- E=0 region -->
+  <line x1="50" y1="250" x2="250" y2="250" stroke="#007acc" stroke-width="3"/>
+
+  <!-- Jump -->
+  <circle cx="250" cy="250" r="5" fill="white" stroke="#007acc" stroke-width="2"/>
+  <circle cx="250" cy="120" r="5" fill="#007acc"/>
+
+  <!-- 1/r^2 curve (approximation) -->
+  <path d="M250 120 Q350 240 550 240" stroke="#007acc" stroke-width="3" fill="none"/>
+  
+
+  <!-- Labels -->
+  <text x="10" y="55" font-size="14">E</text>
+  <text x="560" y="255" font-size="14">r</text>
+
+</svg>
+<div style="position:absolute; left:400px; top:150px;">
+    \( E \propto \dfrac{1}{r^2} \)
+</div>
+<div style="position:absolute; left:130px; top:220px;">
+    \( E = 0 \)
+</div>
+<div style="position:absolute; left:270px; top:100px;">
+    Discontinuity
+</div>
+
+</div>
+<hr>
+<h3>Graph: Electric Potential \( V(r) \) vs Distance</h3>
+<div style="position:relative; width:600px;">
+<svg width="600" height="320" viewBox="0 0 600 320" style="background:#f9fbfd; border-radius:8px;">
+
+  <!-- Axes -->
+  <line x1="60" y1="260" x2="560" y2="260" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="40" x2="60" y2="260" stroke="#333" stroke-width="2"/>
+
+  <!-- Mark R -->
+  <line x1="260" y1="260" x2="260" y2="90" stroke="#888" stroke-dasharray="5,5"/>
+  <text x="252" y="280" font-size="14">R</text>
+
+  <!-- Constant region (inside) -->
+  <line x1="60" y1="120" x2="260" y2="120" stroke="#007acc" stroke-width="3"/>
+
+  <!-- Continuous connection point -->
+  <circle cx="260" cy="120" r="5" fill="#007acc"/>
+
+  <!-- 1/r curve (outside) -->
+  <path d="M260 120 Q400 220 560 240"
+        stroke="#007acc"
+        stroke-width="3"
+        fill="none"/>
+
+  <!-- Labels -->
+  <text x="20" y="50" font-size="14">V</text>
+  <text x="565" y="265" font-size="14">r</text>
+
+</svg>
+<div style="position:absolute; left:400px; top:150px;">
+    \( V \propto \dfrac{1}{r} \)
+</div>
+<div style="position:absolute; left:130px; top:70px;">
+    \( V = \dfrac{kQ}{R} \)
+</div>
+<div style="position:absolute; left:270px; top:100px;">
+    Continuous
+</div>
+
+</div>  
+</section>
+<hr>
+<section>
+    <h2>AGL for Spheres</h2>
+
+    <div class="chapter-list">
+        <a href="./01a-uniformly-charged-sphere.html">1. Uniformly Charged Sphere</a>
+		<a href="./01b-non-uniformly-charged-sphere.html">2. Non-Uniformly Charged Sphere</a>
+		<a href="./01c-uniformly-charged-sphere-cavity.html">3. Uniformly Charged Sphere with Cavity</a>
+        
+    </div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

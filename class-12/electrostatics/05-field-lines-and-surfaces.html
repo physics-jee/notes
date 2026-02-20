@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Field Lines and Equipotential Surfaces</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Field Lines and Equipotential Surfaces</h1>
+    <p class="subtitle">
+        Visualizing the geometry of electrostatic forces and energy.
+    </p>
+
+    <section>
+        <h2>What are Field Lines and Equipotential Surfaces?</h2>
+        <p>
+            Mathematical equations for \(\vec{E}\) and \(V\) perfectly describe electrostatics, but they lack immediate visual intuition. To bridge this gap, physicist Michael Faraday introduced the concept of geometric mapping.
+        </p>
+        <p>
+            <strong>Electric Field Lines</strong> are imaginary, continuous curves drawn through space such that the tangent to the curve at any given point indicates the exact direction of the net electric field vector \(\vec{E}\) at that point.
+        </p>
+        <p>
+            <strong>Equipotential Surfaces</strong> are 3D geometric surfaces (or 2D lines in a cross-section) representing the locus of all points in space that share the exact same electric potential \(V\). 
+        </p>
+        <div class="insightbox">
+            Field lines represent the vector "force" world. Equipotential surfaces represent the scalar "energy" world. Together, they provide a complete topographical map of the electrostatic environment.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we draw and interpret them?</h2>
+        <p>
+            To accurately construct and interpret these maps for JEE problem-solving, we follow a strict set of geometric rules derived directly from the mathematics of \(\vec{E}\) and \(V\).
+        </p>
+
+        <h3>Rules for Electric Field Lines</h3>
+        <ul>
+            <li><strong>Origin and Termination:</strong> Field lines originate on positive charges and terminate on negative charges (or extend to infinity if the system has a net charge).</li>
+            <li><strong>Magnitude by Density:</strong> The relative strength of the electric field is proportional to the spatial density of the lines. Regions where lines are crowded together indicate a strong \(\vec{E}\) field; regions where they are far apart indicate a weak \(\vec{E}\) field.</li>
+            <li><strong>Proportionality:</strong> The number of lines leaving a positive charge or entering a negative charge is directly proportional to the magnitude of the charge.</li>
+        </ul>
+
+        <h3>Rules for Equipotential Surfaces</h3>
+        <p>
+            By definition, the potential difference \(\Delta V\) between any two points \(A\) and \(B\) on the <em>same</em> equipotential surface is zero. Since the work done by an external agent to move a test charge \(q_0\) is given by \(W = q_0 \Delta V\), it follows that:
+        </p>
+        \[W_{A \to B} = 0\]
+        <p>
+            No net work is done moving a charge along an equipotential surface.
+        </p>
+
+        <h3>The Orthogonal Relationship</h3>
+        <p>
+            The most critical relationship between the two maps is that <strong>electric field lines are always strictly perpendicular (orthogonal) to equipotential surfaces</strong> at every point in space. 
+        </p>
+        <p>
+            Mathematically, since \(W = \int \vec{F} \cdot d\vec{r} = q_0 \int \vec{E} \cdot d\vec{r} = 0\) along the surface, the dot product \(\vec{E} \cdot d\vec{r}\) must be zero. This proves \(\vec{E}\) is perpendicular to the displacement vector \(d\vec{r}\) lying on the surface.
+        </p>
+    </section>
+
+    <section>
+        <h2>Standard Configurations</h2>
+        <p>
+            Recognizing the standard geometries is crucial for mapping complex fields.
+        </p>
+        
+        <h3>1. Isolated Point Charge</h3>
+        <p>
+            For a single point charge, field lines are radial (pointing outwards for positive, inwards for negative). The equipotential surfaces are concentric spheres centered on the charge.
+        </p>
+        
+
+        <h3>2. Electric Dipole</h3>
+        <p>
+            For a system of two equal and opposite charges, the field lines curve from the positive to the negative charge. The equipotential surface exactly midway between them is a flat plane at \(V = 0\).
+        </p>
+        
+
+        <h3>3. Uniform Electric Field</h3>
+        <p>
+            Created between two infinitely large, oppositely charged parallel plates. The field lines are parallel, equally spaced straight lines. The equipotential surfaces are flat, parallel planes orthogonal to the field lines.
+        </p>
+        
+    </section>
+
+    <section>
+        <h2>Exceptions and Boundary Conditions</h2>
+        <p>
+            Several strict physical boundaries govern these visualizations. Violating them indicates a conceptual error:
+        </p>
+        <ul>
+            <li><strong>Intersection is Impossible:</strong> Two electric field lines can <em>never</em> intersect. If they did, a test charge placed at the intersection would have two different directions of net force simultaneously, which is a physical impossibility. Similarly, two different equipotential surfaces can never intersect.</li>
+            <li><strong>No Closed Loops:</strong> Electrostatic field lines can never form closed continuous loops. The conservative nature of the electrostatic field requires that the line integral around a closed path is zero (\(\oint \vec{E} \cdot d\vec{l} = 0\)). <em>Exception:</em> Induced electric fields created by changing magnetic fields (Faraday's Law of Induction) are non-conservative and <strong>do</strong> form closed loops, but they are strictly excluded from electrostatics.</li>
+            <li><strong>Conductor Boundaries:</strong> In electrostatic equilibrium, the entire solid volume and the surface of a conductor form a single equipotential volume. Therefore, electric field lines must always meet the surface of a conductor at exactly a \(90^\circ\) angle. If a parallel component existed, it would cause surface charges to flow, breaking the static equilibrium.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

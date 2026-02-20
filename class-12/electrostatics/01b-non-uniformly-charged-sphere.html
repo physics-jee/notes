@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E for Non-Uniformly Charged Sphere | JEE Physics Notes</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<nav class="top-nav">
+    <a href="./01-gauss-law.html" class="back-btn">
+        <span>&larr;</span> Back to AGL
+    </a>
+</nav>
+
+<h1>Electric Field for Non-Uniformly Charged Sphere</h1>
+<p class="subtitle">
+Spherically symmetric volume charge density \( \rho = \rho(r) \)
+</p>
+
+<section>
+
+<h2>General Spherically Symmetric Charge Distribution</h2>
+
+<p>
+Consider a solid sphere of radius <strong>R</strong> whose volume charge density 
+depends only on distance from the center:
+</p>
+
+\[
+\rho = \rho(r)
+\]
+
+<hr>
+
+<h3>Step 1: Symmetry Argument</h3>
+
+<p>
+Since the charge density depends only on \( r \), the distribution is spherically symmetric.
+Therefore:
+</p>
+
+<ul>
+<li>\( \vec{E} \) must be radial.</li>
+<li>The magnitude \( E \) depends only on distance \( r \).</li>
+</ul>
+
+\[
+\vec{E}(r) = E(r)\,\hat{r}
+\]
+
+<hr>
+
+<h3>Step 2: Enclosed Charge (General Formula)</h3>
+
+<p>
+To apply Gauss Law, we first compute the charge enclosed within a Gaussian sphere of radius \( r \):
+</p>
+
+\[
+Q_{\text{enc}}(r)
+=
+\int_0^r \rho(r') \, dV
+\]
+
+In spherical coordinates:
+
+\[
+dV = 4\pi r'^2 dr'
+\]
+
+Therefore,
+
+\[
+Q_{\text{enc}}(r)
+=
+4\pi \int_0^r \rho(r')\, r'^2 \, dr'
+\]
+
+<hr>
+
+<h3>Step 3: Apply Gauss Law</h3>
+
+\[
+E(r)(4\pi r^2)
+=
+\frac{Q_{\text{enc}}(r)}{\varepsilon_0}
+\]
+
+Thus,
+
+\[
+E(r)
+=
+\frac{1}{\varepsilon_0 r^2}
+\int_0^r \rho(r')\, r'^2 dr'
+\]
+
+<p>
+This is the <strong>general formula</strong> for the electric field inside any 
+spherically symmetric charge distribution.
+</p>
+
+<hr>
+
+<h2>Special Case: \( \rho(r) = \rho_0 r^n \)</h2>
+
+<p>
+Let the volume charge density vary as a power of \( r \):
+</p>
+
+\[
+\rho(r) = \rho_0 r^n
+\]
+
+<hr>
+<h3>Enclosed Charge</h3>
+
+\[
+Q_{\text{enc}}(r)
+=
+4\pi \rho_0
+\int_0^r r'^{n+2} dr'
+\]
+
+\[
+=
+4\pi \rho_0
+\frac{r^{n+3}}{n+3}
+\quad
+(n \neq -3)
+\]
+
+<hr>
+<h3>Electric Field Inside \( (r \lt R) \)</h3>
+
+\[
+E(r)
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{Q_{\text{enc}}(r)}{r^2}
+\]
+
+\[
+\boxed{
+E(r)
+=
+\frac{\rho_0}{\varepsilon_0}\frac{r^{\,n+1}}{n+3}
+}
+\]
+
+\[
+\vec{E}(r)
+=
+\frac{\rho_0}{\varepsilon_0}\frac{r^{\,n+1}}{n+3}\,\hat{r}
+\]
+<hr>
+<h3>Electric Field Outside \( (r > R) \)</h3>
+<p>
+Outside the sphere, only total charge matters:
+</p>
+
+\[
+Q =
+4\pi \rho_0
+\frac{R^{n+3}}{n+3}
+\]
+
+\[
+\vec{E}(r)
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{Q}{r^2}\,\hat{r}
+\]
+
+<p>
+Thus, outside the sphere behaves like a point charge at the center, irrespective of how charge is distributed inside.
+</p>
+
+<hr>
+
+<h3>Structural Insight</h3>
+
+<ul>
+<li>If \( \rho(r) \propto r^n \), then \( E(r) \propto r^{n+1} \).</li>
+<li>Uniform case (\( n = 0 \)) gives \( E \propto r \).</li>
+<li>Outside field is always \( \propto 1/r^2 \).</li>
+<li>Symmetry determines direction; Gauss Law determines magnitude.</li>
+</ul>
+
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

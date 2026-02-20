@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Electric Dipole</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Electric Dipole</h1>
+    <p class="subtitle">
+        The fundamental system of charge separation and polar interactions.
+    </p>
+
+    <section>
+        <h2>What is an Electric Dipole?</h2>
+        <p>
+            An electric dipole is a localized system consisting of two equal and opposite point charges (\(+q\) and \(-q\)) separated by a small, finite vector distance (\(2a\)). It represents the simplest charge distribution that has a net zero charge but still produces a non-zero electric field.
+        </p>
+        <p>
+            The fundamental characteristic of a dipole is its <strong>Electric Dipole Moment (\(\vec{p}\))</strong>. It is a vector quantity that measures the system's overall polarity and strength.
+        </p>
+        \[\vec{p} = q \cdot (2\vec{a})\]
+        
+        [Image of an electric dipole showing the dipole moment vector pointing from negative to positive charge]
+
+        <div class="insightbox">
+            <strong>Crucial Convention:</strong> In physics, the dipole moment vector \(\vec{p}\) is strictly defined as pointing from the <em>negative</em> charge to the <em>positive</em> charge. This is geometrically aligned with how the dipole orientates itself in an external field. (Note: Chemistry often uses the opposite convention, pointing from positive to negative to denote electron shift).
+        </div>
+    </section>
+
+    <section>
+        <h2>How does a Dipole create its own Field and Potential?</h2>
+        <p>
+            Because the two charges are spatially separated, their individual electric fields and potentials do not perfectly cancel each other out at any finite distance (except exactly at the equatorial midpoint for potential).
+        </p>
+
+        <h3>1. On the Axial Line (End-on Position)</h3>
+        <p>
+            For a point at a distance \(r\) from the center of the dipole along its axis, the electric field is parallel to \(\vec{p}\):
+        </p>
+        \[\vec{E}_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2\vec{p}r}{(r^2 - a^2)^2}\]
+
+        <h3>2. On the Equatorial Line (Broadside-on Position)</h3>
+        <p>
+            For a point at a distance \(r\) on the perpendicular bisector of the dipole, the electric field is anti-parallel (opposite) to \(\vec{p}\):
+        </p>
+        \[\vec{E}_{\text{equatorial}} = - \frac{1}{4\pi\varepsilon_0} \frac{\vec{p}}{(r^2 + a^2)^{3/2}}\]
+        
+        [Image of electric field vectors for an electric dipole at axial and equatorial positions]
+
+        <h3>3. General Electric Potential</h3>
+        <p>
+            The electric potential at any generic point \((r, \theta)\) relative to the center of a short dipole (where \(\theta\) is the angle measured from the dipole moment axis) is given by:
+        </p>
+        \[V(r, \theta) = \frac{1}{4\pi\varepsilon_0} \frac{p \cos\theta}{r^2} = \frac{1}{4\pi\varepsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}\]
+    </section>
+
+    <section>
+        <h2>How does a Dipole behave in an External Field?</h2>
+        <p>
+            When an electric dipole is placed in a uniform external electric field \(\vec{E}\), it experiences forces that dictate its mechanical behavior.
+        </p>
+        
+        [Image of an electric dipole in a uniform external electric field experiencing a torque]
+
+        <h3>Force and Torque</h3>
+        <p>
+            In a <em>uniform</em> electric field, the force on the positive charge (\(+q\vec{E}\)) exactly cancels the force on the negative charge (\(-q\vec{E}\)). The net translational force is always zero.
+        </p>
+        <p>
+            However, because the lines of action of these two forces do not coincide, they form a couple and exert a <strong>Torque (\(\vec{\tau}\))</strong> that attempts to align the dipole with the field:
+        </p>
+        \[\vec{\tau} = \vec{p} \times \vec{E}\]
+        <p>
+            The magnitude is \(\tau = pE \sin\theta\). Torque is maximum at \(90^\circ\) and zero at \(0^\circ\) (stable equilibrium) and \(180^\circ\) (unstable equilibrium).
+        </p>
+
+        <h3>Potential Energy</h3>
+        <p>
+            Work must be done by an external agent to rotate the dipole against this electrostatic torque. This work is stored as Potential Energy (\(U\)):
+        </p>
+        \[U = - \vec{p} \cdot \vec{E} = -pE \cos\theta\]
+    </section>
+
+    <section>
+        <h2>Exceptions and Limiting Cases</h2>
+        <p>
+            The standard dipole formulas used in JEE problems are subject to specific mathematical approximations and boundary conditions:
+        </p>
+        <ul>
+            <li><strong>The "Ideal" or "Short" Dipole Approximation:</strong> The simplified formulas for the electric field (\(E_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2p}{r^3}\) and \(E_{\text{equatorial}} = \frac{1}{4\pi\varepsilon_0} \frac{p}{r^3}\)) strictly apply <em>only</em> when the distance \(r\) is much greater than the dipole length (\(r \gg a\)). For points close to the dipole, the exact algebraic formulas must be used. Notice that the field of a short dipole falls off as \(1/r^3\), which is faster than the \(1/r^2\) falloff of a single point charge.</li>
+            <li><strong>Non-Uniform External Fields:</strong> The rule that "net force on a dipole is zero" is an exception strictly limited to <em>uniform</em> fields. If the external field is non-uniform (e.g., the field created by a nearby point charge), the \(+q\) and \(-q\) charges will experience forces of different magnitudes. The dipole will experience both a net torque <em>and</em> a net translational force pulling it toward the region of stronger field.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

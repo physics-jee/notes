@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Electric Potential</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Electric Potential and Potential Energy</h1>
+    <p class="subtitle">
+        The scalar description of the electric field based on work and energy.
+    </p>
+
+    <section>
+        <h2>What is Electric Potential?</h2>
+        <p>
+            In mechanics, we analyze physical systems using either force (a vector) or energy (a scalar). Electrostatics offers the same dual perspective. While the Electric Field (\(\vec{E}\)) describes the electrostatic <em>force</em> per unit charge, the <strong>Electric Potential (\(V\))</strong> describes the <em>potential energy</em> per unit charge.
+        </p>
+        <p>
+            Conceptually, the electric potential at a point is the external work done to bring a unit positive test charge from infinity to that specific point, without any acceleration (kinetic energy remains zero). Since the electrostatic force is a conservative force, this work is stored completely as electrostatic potential energy.
+        </p>
+        <div class="insightbox">
+            Because potential is a scalar quantity, it completely eliminates the need for vector resolution and trigonometry, making calculations for complex charge distributions much simpler.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we calculate Potential and Energy?</h2>
+        <p>
+            The fundamental relationship between electrostatic potential energy (\(U\)) and electric potential (\(V\)) for a test charge \(q_0\) is:
+        </p>
+        \[V = \frac{U}{q_0}\]
+        <p>
+            The SI unit of electric potential is the Volt (\(\text{V}\)), which is equivalent to one Joule per Coulomb (\(\text{J/C}\)).
+        </p>
+
+        <h3>Potential of a Point Charge</h3>
+        <p>
+            The electric potential at a distance \(r\) from a single source point charge \(q\) is derived by integrating the work done against the electric field from infinity to \(r\):
+        </p>
+        \[V = \frac{1}{4\pi\varepsilon_0} \frac{q}{r}\]
+        <div class="insightbox">
+            <strong>Critical Rule:</strong> Unlike the vector formulation of the electric field where we use absolute values and determine direction conceptually, for electric potential, you <strong>must</strong> substitute the charge \(q\) with its proper algebraic sign. A positive charge creates a positive potential, and a negative charge creates a negative potential.
+        </div>
+
+        <h3>Superposition Principle for Potential</h3>
+        <p>
+            To find the net electric potential at a point due to a system of multiple discrete charges, we simply take the algebraic sum (not the vector sum) of the individual potentials:
+        </p>
+        \[V_{\text{net}} = V_1 + V_2 + \dots + V_n = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_i}{r_i}\]
+        
+        
+
+    </section>
+
+    <section>
+        <h2>How are Field and Potential Related?</h2>
+        <p>
+            Electric field and potential are two mathematical representations of the exact same physical reality. The electric potential difference between two points \(A\) and \(B\) is the negative line integral of the electric field:
+        </p>
+        \[V_B - V_A = - \int_{A}^{B} \vec{E} \cdot d\vec{r}\]
+        <p>
+            Conversely, the electric field is the negative spatial derivative (the gradient) of the electric potential. In one dimension, this is written as:
+        </p>
+        \[E = - \frac{dV}{dr}\]
+        <p>
+            In three-dimensional space, using the del operator (\(\nabla\)):
+        </p>
+        \[\vec{E} = - \nabla V = - \left( \frac{\partial V}{\partial x}\hat{i} + \frac{\partial V}{\partial y}\hat{j} + \frac{\partial V}{\partial z}\hat{k} \right)\]
+        <p>
+            The negative sign indicates that the electric field always points in the direction of <em>decreasing</em> electric potential.
+        </p>
+    </section>
+
+    <section>
+        <h2>Exceptions and Boundary Conditions</h2>
+        <p>
+            When applying the concept of electric potential to advanced JEE problems, certain standard assumptions fail and specific boundary conditions must be applied:
+        </p>
+        <ul>
+            <li><strong>The Reference at Infinity:</strong> We conventionally assume that the electric potential is zero at infinity (\(V_{\infty} = 0\)). <em>Exception:</em> This assumption completely fails for infinite charge distributions (like an infinitely long wire or an infinite planar sheet). For infinite geometries, you cannot set infinity as the reference point, or the math yields infinite potential everywhere. You must choose a finite, specific distance as your zero-reference point.</li>
+            <li><strong>Potential Inside a Conductor:</strong> The electric field inside a conductor in electrostatic equilibrium is zero (\(\vec{E} = 0\)). Since \(E = -dV/dr = 0\), it mathematically proves that the potential \(V\) must be constant throughout the entire volume of the conductor. <em>The entire volume of a solid conductor is an equipotential region, and its internal potential is exactly equal to the potential on its surface.</em></li>
+            <li><strong>Path Independence:</strong> Because the electrostatic field is conservative, the work done in moving a charge between two points is entirely independent of the path taken. If a charge is moved in a closed loop (returning to its starting point), the net work done by the electrostatic field is exactly zero (\(\oint \vec{E} \cdot d\vec{r} = 0\)).</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

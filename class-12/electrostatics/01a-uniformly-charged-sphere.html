@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E V for Uniformly Charged Sphere | JEE Physics Notes</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+
+<script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./01-gauss-law.html" class="back-btn">
+        <span>&larr;</span> Back to AGL
+    </a>
+</nav>
+<h1>E, V for Uniformly Charged Sphere</h1>
+<p class="subtitle">
+Using Shell values to calculate for Sphere
+</p>
+<section>
+<h2>Electric Field of a Uniformly Charged Solid Sphere</h2>
+<p>
+Consider a solid sphere of radius <strong>R</strong> with total charge <strong>Q</strong> uniformly distributed throughout its volume.
+</p>
+<hr>
+<h3>Step 1: Symmetry Argument</h3>
+<p>
+The charge distribution is spherically symmetric. Therefore, by the same symmetry reasoning used for the spherical shell:
+</p>
+<ul>
+<li>\( \vec{E} \) must be radial.</li>
+<li>The magnitude \( E \) depends only on distance \( r \) from the center.</li>
+</ul>
+\[
+\vec{E}(r) = E(r)\,\hat{r}
+\]
+<hr>
+<h3>Step 2: Charge Density</h3>
+<p>
+Since charge is uniformly distributed in volume,
+</p>
+\[
+\rho = \frac{Q}{\frac{4}{3}\pi R^3}
+\]
+<hr>
+<h3>Case I: \( r \lt R \) (Inside the Sphere)</h3>
+<p>
+Choose a spherical Gaussian surface of radius \( r \). The enclosed charge is proportional to enclosed volume:
+</p>
+
+\[
+Q_{\text{enclosed}} = \rho \left( \frac{4}{3}\pi r^3 \right)
+\]
+
+Substitute \( \rho \):
+
+\[
+Q_{\text{enclosed}} = Q \frac{r^3}{R^3}
+\]
+
+Now apply Gauss Law:
+
+\[
+E(r)(4\pi r^2) = \frac{Q r^3}{\varepsilon_0 R^3}
+\]
+
+\[
+E(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^3} r
+\]
+
+\[
+\vec{E}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^3} r\,\hat{r}
+\]
+<p>
+Inside the sphere, the electric field increases linearly with \( r \).
+</p>
+<hr>
+<h3>Case II: \( r > R \) (Outside the Sphere)</h3>
+<p>
+The entire charge \( Q \) is enclosed.
+</p>
+
+\[
+E(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}
+\]
+
+\[
+\vec{E}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\,\hat{r}
+\]
+<hr>
+<h3>Continuity at \( r = R \)</h3>
+<p>
+Inside value at \( r = R \):
+</p>
+
+\[
+E(R^-) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^2}
+\]
+<p>
+Outside value at \( r = R \):
+</p>
+
+\[
+E(R^+) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^2}
+\]
+<p>
+Thus, unlike the spherical shell, the electric field is continuous at the surface.
+</p>
+<hr>
+</section>
+<section>
+<h2>Electric Potential of a Uniformly Charged Solid Sphere</h2>
+<h3>(a) For \( r \ge R \)</h3>
+<p>
+We use the concept that outside the sphere, the spherical charge distribution behaves like a point charge at the center. So, the formula for potential is same as that of a point charge. This is true only for outside points.
+</p> 
+  \[
+  V(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{r}
+  \]
+<p>
+For \( r = R \) at the surface:
+</p> 
+  \[
+  V(r) = \frac{1}{4\pi \varepsilon_0}\frac{Q}{R} = \frac{kQ}{R}
+  \]
+
+<h3>(b) For \( r \lt R \)</h3>
+<p>
+To find the potential inside, we use:
+</p>
+\[
+V(r) - V(\infty) = - \int_{\infty}^{r} \vec{E} \cdot d\vec{l}
+\]
+<p>
+where \(V(\infty) = 0\)
+</p>
+<p>
+We break the integration into two regions:
+</p>
+\[
+V(r) = - \left( \int_{\infty}^{R} E_{\text{outside}}\,dr
++
+\int_{R}^{r} E_{\text{inside}}\,dr \right)
+\]
+<p>
+We split the integral at \( R \) because the expression for \( E \) changes there. Even if \( E \) were discontinuous at \( R \), the integral would still be valid provided the discontinuity is finite (bounded).
+</p>
+
+<hr>
+<h4>First Integral (Outside Region)</h4>
+\[
+\int_{\infty}^{R} \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\,dr
+=
+- \frac{1}{4\pi\varepsilon_0}\frac{Q}{R}
+\]
+<hr>
+<h4>Second Integral (Inside Region)</h4>
+Inside field:
+
+\[
+E(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^3} r
+\]
+
+Now integrate:
+
+\[
+\int_{R}^{r} \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^3} r\,dr
+=
+\frac{1}{4\pi\varepsilon_0}\frac{Q}{R^3}
+\left( \frac{r^2}{2} - \frac{R^2}{2} \right)
+\]
+<hr>
+<h4>Final Expression</h4>
+Combining both parts:
+
+\[
+V(r)
+=
+\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}
+-
+\frac{1}{4\pi\varepsilon_0}\frac{Q}{2R^3}
+\left( r^2 - R^2 \right)
+\]
+
+Simplifying:
+
+\[
+V(r)
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{Q}{2R^3}
+\left( 3R^2 - r^2 \right)
+\]
+<hr>
+<h3>Continuity at \( r = R \)</h3>
+\[
+V(R^-)
+=
+\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}
+=
+V(R^+)
+\]
+<p>
+Thus, the potential is continuous at the surface. Unlike the shell case, both \( E \) and \( V \) are continuous.
+</p>
+<hr>
+<h3>Structural Insight</h3>
+<ul>
+<li>Inside the solid sphere, \( E \propto r \) (linear).</li>
+<li>Inside the solid sphere, \( V \propto (3R^2 - r^2) \) (parabola).</li>
+<li>Outside, both reduce to point charge behavior.</li>
+</ul>
+<hr>
+<h3>Graph: Electric Field vs Distance</h3>
+<div style="position:relative; width:600px;">
+<svg width="600" height="300" viewBox="0 0 600 300" style="background:#f9fbfd; border-radius:8px;">
+
+  <!-- Axes -->
+  <line x1="50" y1="250" x2="550" y2="250" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="250" stroke="#333" stroke-width="2"/>
+
+  <!-- R marker -->
+  <line x1="250" y1="250" x2="250" y2="80" stroke="#888" stroke-dasharray="5,5"/>
+  <text x="240" y="270" font-size="14">R</text>
+
+  <!-- E propto r region -->
+  <line x1="50" y1="250" x2="250" y2="120" stroke="#007acc" stroke-width="3"/>
+
+  <!-- Jump -->
+  
+  <circle cx="250" cy="120" r="5" fill="#007acc"/>
+
+  <!-- 1/r^2 curve (approximation) -->
+  
+<path d="M250 120 Q300 200 550 240"
+      stroke="#007acc"
+      stroke-width="3"
+      fill="none"/>
+
+  <!-- Labels -->
+  <text x="10" y="55" font-size="14">E</text>
+  <text x="560" y="255" font-size="14">r</text>
+
+</svg>
+<div style="position:absolute; left:400px; top:150px;">
+    \( E \propto \dfrac{1}{r^2} \)
+</div>
+<div style="position:absolute; left:130px; top:140px;">
+    \( E \propto r \)
+</div>
+<div style="position:absolute; left:270px; top:100px;">
+    Continuity
+</div>
+</div>
+<hr>
+<h3>Graph: Electric Potential \( V(r) \) vs Distance (Solid Sphere)</h3>
+
+<div style="position:relative; width:600px;">
+
+<svg width="600" height="320" viewBox="0 0 600 320"
+     style="background:#f9fbfd; border-radius:8px;">
+
+  <!-- Axes -->
+  <line x1="60" y1="260" x2="560" y2="260" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="40" x2="60" y2="260" stroke="#333" stroke-width="2"/>
+
+  <!-- Origin -->
+  <text x="50" y="275" font-size="12">0</text>
+
+  <!-- Mark R -->
+  <line x1="260" y1="260" x2="260" y2="100"
+        stroke="#888" stroke-dasharray="5,5"/>
+  <text x="252" y="280" font-size="14">R</text>
+
+  <!-- Quadratic inside curve -->
+<path d="M60 70 Q160 75 260 150"
+      stroke="#007acc"
+      stroke-width="3"
+      fill="none"/>
+
+
+  <!-- Smooth connection point -->
+  <circle cx="260" cy="150" r="5" fill="#007acc"/>
+
+  <!-- 1/r outside curve -->
+  <path d="M260 150 Q300 200 560 230"
+        stroke="#007acc"
+        stroke-width="3"
+        fill="none"/>
+
+  <!-- Axis labels -->
+  <text x="20" y="50" font-size="14">V</text>
+  <text x="565" y="265" font-size="14">r</text>
+
+</svg>
+
+<!-- Overlay LaTeX labels -->
+<div style="position:absolute; left:110px; top:50px;">
+  \( V \propto 3R^2 - r^2 \)
+</div>
+<div style="position:absolute; left:400px; top:150px;">
+  \( V \propto \dfrac{1}{r} \)
+</div>
+</div>
+</section>
+</div>  
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</body>
+</html>
