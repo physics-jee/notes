@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Volume Charge Distributions</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Volume Charge Distributions</h1>
+    <p class="subtitle">
+        Applying Gauss' Law to solid 3D macroscopic bodies.
+    </p>
+
+    <section>
+        <h2>What is a Volume Charge Distribution?</h2>
+        <p>
+            In previous chapters, we looked at charges concentrated at points, on 1D lines, or on 2D surfaces. A <strong>Volume Charge Distribution</strong> occurs when electric charge is spread continuously throughout the entire 3D volume of a solid object. 
+        </p>
+        <p>
+            This can strictly only happen in <strong>insulators (dielectrics)</strong>. In a conductor, free charges repel each other and instantly migrate to the outer surface. In an insulator, charges are locked into place and can be distributed throughout the interior volume with a volume charge density \(\rho\) (measured in \(\text{C/m}^3\)).
+        </p>
+        <div class="insightbox">
+            If we increase the total charge \(Q\) of a dielectric sphere by increasing its charge density \(\rho\), its physical geometric radius \(R\) remains absolutely constant. Visually, you can imagine this as the sphere's color becoming more intense, rather than the sphere physically expanding in size.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we find the Field of a Solid Sphere?</h2>
+        <p>
+            Consider a solid non-conducting sphere of radius \(R\) with a uniform volume charge density \(\rho\), carrying a total charge \(Q\). We use concentric spherical Gaussian surfaces to find the electric field at a distance \(r\) from the center.
+        </p>
+
+        <h3>1. Outside the Sphere (\(r \ge R\))</h3>
+        <p>
+            We draw a Gaussian sphere of radius \(r > R\). The total enclosed charge is the entire charge of the sphere (\(Q\)).
+        </p>
+        \[\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0} \implies E(4\pi r^2) = \frac{Q}{\varepsilon_0}\]
+        \[E_{\text{out}} = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^2}\]
+        <p>
+            <strong>Conclusion:</strong> For external points, a uniform solid sphere behaves exactly as if all its charge were concentrated at a single point at its geometric center.
+        </p>
+
+        <h3>2. Inside the Sphere (\(r < R\))</h3>
+        <p>
+            We draw a Gaussian sphere of radius \(r < R\). The enclosed charge is only the fraction of the total charge that sits <em>inside</em> our imaginary surface. 
+        </p>
+        \[Q_{\text{enc}} = \rho V_{\text{enclosed}} = \rho \left( \frac{4}{3}\pi r^3 \right)\]
+        <p>
+            Applying Gauss' Law:
+        </p>
+        \[E(4\pi r^2) = \frac{\rho \frac{4}{3}\pi r^3}{\varepsilon_0}\]
+        \[E_{\text{in}} = \frac{\rho r}{3\varepsilon_0} = \frac{1}{4\pi\varepsilon_0} \frac{Q r}{R^3}\]
+        <p>
+            <strong>Conclusion:</strong> Inside a uniform solid sphere, the electric field is directly proportional to the distance from the center (\(E \propto r\)). It is zero at the exact center.
+        </p>
+
+        
+        
+    </section>
+
+    <section>
+        <h2>How do we find the Potential of a Solid Sphere?</h2>
+        <p>
+            Since \(E = -\frac{dV}{dr}\), we find the potential by integrating the electric field equations from infinity.
+        </p>
+        <ul>
+            <li><strong>Outside (\(r \ge R\)):</strong> Integrating the inverse-square field gives the standard point-charge potential:
+                \[V_{\text{out}} = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r}\]
+            </li>
+            <li><strong>Inside (\(r < R\)):</strong> We must integrate the work done from \(\infty\) to \(R\), and then from \(R\) to \(r\). This yields a parabolic potential curve:
+                \[V_{\text{in}} = \frac{\rho}{6\varepsilon_0} (3R^2 - r^2) = \frac{1}{4\pi\varepsilon_0} \frac{Q}{2R^3} (3R^2 - r^2)\]
+            </li>
+        </ul>
+        <div class="insightbox">
+            <strong>Key JEE Checkpoint:</strong> The potential at the exact center (\(r=0\)) is \(V_{\text{center}} = \frac{3}{2} V_{\text{surface}}\). The center is the point of highest potential energy for a positive test charge.
+        </div>
+        
+        
+
+    </section>
+
+    <section>
+        <h2>Exceptions and Advanced Cases (JEE Level)</h2>
+        <p>
+            Competitive exams will push beyond the uniform sphere. You must recognize and handle these boundary conditions:
+        </p>
+        
+        <h3>1. Non-Uniform Volume Charge Density (\(\rho(r)\))</h3>
+        <p>
+            If the charge density is not a constant but varies with radius (e.g., \(\rho = \rho_0 r\)), you <strong>cannot</strong> simply use \(Q_{\text{enc}} = \rho \times V\). You must use a volume integral to find the enclosed charge inside your Gaussian surface:
+        </p>
+        \[Q_{\text{enc}} = \int_{0}^{r} \rho(r) (4\pi r^2) dr\]
+        <p>
+            Once \(Q_{\text{enc}}\) is found via calculus, you substitute it back into \(E(4\pi r^2) = \frac{Q_{\text{enc}}}{\varepsilon_0}\).
+        </p>
+
+        <h3>2. Infinite Solid Cylinder</h3>
+        <p>
+            For a very long non-conducting cylinder of radius \(R\) and volume density \(\rho\), we use a coaxial cylindrical Gaussian surface. 
+            Inside (\(r < R\)), the field is \(E = \frac{\rho r}{2\varepsilon_0}\). 
+            Outside (\(r \ge R\)), the field acts like a line charge, \(E = \frac{\rho R^2}{2\varepsilon_0 r}\).
+        </p>
+
+        <h3>3. The Cavity inside a Solid Sphere</h3>
+        <p>
+            A classic high-level problem involves a uniform solid sphere of radius \(R\) with a spherical cavity of radius \(a\) carved out of it. The center of the cavity is displaced by a vector \(\vec{d}\) from the center of the main sphere. What is the electric field strictly inside the empty cavity?
+        </p>
+        
+        <p>
+            Using the superposition principle, we treat this as a complete solid positive sphere <em>plus</em> a smaller solid negative sphere (the cavity). The vector sum of their internal electric fields yields:
+        </p>
+        \[\vec{E}_{\text{cavity}} = \frac{\rho}{3\varepsilon_0} \vec{d}\]
+        <div class="insightbox">
+            <strong>Remarkable Exception:</strong> The electric field inside the cavity depends only on the displacement vector \(\vec{d}\). It is entirely independent of the position \(\vec{r}\) inside the cavity. Therefore, <strong>the electric field inside the cavity is perfectly uniform in both magnitude and direction</strong>.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Electrostatic Pressure</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Electrostatic Pressure</h1>
+    <p class="subtitle">
+        The outward mechanical force exerted by a surface charge on its own conductor.
+    </p>
+
+    <section>
+        <h2>What is Electrostatic Pressure?</h2>
+        <p>
+            When we charge a conductor, all the excess charges distribute themselves over its outer surface. Because these surface charges are of the same sign, they mutually repel one another. 
+        </p>
+        <p>
+            Every infinitesimal patch of charge on the surface experiences an outward repulsive force from all the other charges on the rest of the conductor. The net outward mechanical force experienced per unit area of the charged surface is defined as the <strong>Electrostatic Pressure</strong> (\(P\)).
+        </p>
+        <div class="insightbox">
+            Because this pressure is always directed outward (acting to expand the conductor), it is physically analogous to the pressure exerted by a compressed gas inside a balloon.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we Calculate Electrostatic Pressure?</h2>
+        <p>
+            To find the force on a small area element \(dA\) carrying charge \(dq\), we must multiply \(dq\) by the electric field created by <em>all other charges</em> on the conductor. A charge cannot exert a net force on itself.
+        </p>
+
+        <h3>1. The Field of the "Rest of the Conductor"</h3>
+        <p>
+            Let the local surface charge density be \(\sigma\). The charge on our tiny element is \(dq = \sigma dA\).
+        </p>
+        <p>
+            The total electric field just outside the conductor is \(E_{\text{out}} = \frac{\sigma}{\varepsilon_0}\), and inside it is \(E_{\text{in}} = 0\). We can view this total field as the vector sum of two parts: the field from our tiny patch (\(E_{\text{patch}}\)) and the field from the rest of the conductor (\(E_{\text{rest}}\)).
+        </p>
+        <ul>
+            <li>Inside the conductor, they must cancel out to give zero: \(E_{\text{patch}}\) points inward, \(E_{\text{rest}}\) points inward. Thus, their magnitudes are equal: \(|E_{\text{patch}}| = |E_{\text{rest}}|\).</li>
+            <li>Outside the conductor, they point in the same outward direction and add up to the total surface field: \(E_{\text{patch}} + E_{\text{rest}} = \frac{\sigma}{\varepsilon_0}\).</li>
+        </ul>
+        <p>
+            Substituting the equality, we find the field produced by the rest of the conductor at the location of \(dA\) is exactly half the total field:
+        </p>
+        \[E_{\text{rest}} = \frac{\sigma}{2\varepsilon_0}\]
+
+        
+
+        <h3>2. Deriving the Pressure Formula</h3>
+        <p>
+            The outward mechanical force \(dF\) on the patch is the product of its charge and the field it sits in:
+        </p>
+        \[dF = dq \cdot E_{\text{rest}} = (\sigma dA) \left( \frac{\sigma}{2\varepsilon_0} \right) = \frac{\sigma^2}{2\varepsilon_0} dA\]
+        <p>
+            Dividing by the area \(dA\), we get the Electrostatic Pressure:
+        </p>
+        \[P = \frac{dF}{dA} = \frac{\sigma^2}{2\varepsilon_0}\]
+        <p>
+            Since the total electric field just outside the surface is \(E = \frac{\sigma}{\varepsilon_0}\), we can also express the pressure purely in terms of the electric field:
+        </p>
+        \[P = \frac{1}{2} \varepsilon_0 E^2\]
+        <div class="insightbox">
+            <strong>Theoretical Connection:</strong> The formula \(\frac{1}{2} \varepsilon_0 E^2\) is mathematically identical to the <strong>Energy Density</strong> (energy stored per unit volume) of an electric field. The outward mechanical pressure a field exerts is exactly equal to the energy density stored in that field.
+        </div>
+    </section>
+
+    <section>
+        <h2>Applications and Exceptions (JEE Classics)</h2>
+        <p>
+            In competitive exams, electrostatic pressure is rarely tested in isolation. It is usually combined with fluid mechanics or elasticity.
+        </p>
+
+        <h3>1. The Charged Soap Bubble</h3>
+        <p>
+            A classic JEE problem involves a soap bubble of radius \(r\) and surface tension \(T\). When the bubble is uncharged, the excess air pressure inside (\(P_{\text{excess}}\)) balances the inward pull of surface tension: \(P_{\text{excess}} = \frac{4T}{r}\).
+        </p>
+        <p>
+            If the bubble is given a charge density \(\sigma\), the outward electrostatic pressure assists the internal air pressure in pushing against the surface tension. For equilibrium:
+        </p>
+        \[P_{\text{excess}} + \frac{\sigma^2}{2\varepsilon_0} = \frac{4T}{r}\]
+        <p>
+            If the bubble is in a vacuum with no internal air pressure (\(P_{\text{excess}} = 0\)), the electrostatic pressure alone balances the surface tension. Finding the radius or charge required for this equilibrium is a standard calculation.
+        </p>
+        
+        
+
+        <h3>2. Always Outward, Regardless of Sign</h3>
+        <p>
+            <strong>Crucial Rule:</strong> Notice that the pressure formula \(P = \frac{\sigma^2}{2\varepsilon_0}\) depends on the <em>square</em> of the charge density. 
+        </p>
+        <p>
+            Whether you place a net positive charge on a conductor or a net negative charge on a conductor, \(\sigma^2\) is always positive. Therefore, electrostatic pressure is <em>always</em> an outward, expansive force. A negative charge does not cause a conductor to "contract" due to electrostatics; electrons repel electrons just as protons repel protons.
+        </p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

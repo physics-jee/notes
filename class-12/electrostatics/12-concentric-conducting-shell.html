@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Potential of Concentric Shells</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Potential of Concentric Spherical Shells</h1>
+    <p class="subtitle">
+        Applying superposition and conductor properties to multi-shell systems.
+    </p>
+
+    <section>
+        <h2>What is the Concentric Shell System?</h2>
+        <p>
+            A concentric spherical shell system consists of two or more thin, hollow, conducting spheres that share the exact same geometric center but have different radii. 
+        </p>
+        <p>
+            Because they are conductors, any charge supplied to a shell resides entirely on its surfaces. The power of analyzing this system lies in the fact that the electric potential at any point in space is simply the scalar algebraic sum of the potentials created independently by each individual shell.
+        </p>
+        <div class="insightbox">
+            Recall the rule for a single uniformly charged shell of radius \(R\) and charge \(Q\):<br>
+            Inside the shell (\(r \le R\)), the potential is uniform: \(V = \frac{1}{4\pi\varepsilon_0} \frac{Q}{R}\).<br>
+            Outside the shell (\(r > R\)), it behaves like a point charge: \(V = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r}\).
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we Calculate Potential? (The Superposition Method)</h2>
+        <p>
+            Consider a standard two-shell system. Let the inner shell (Shell A) have a radius \(a\) and carry a charge \(q_A\). Let the outer shell (Shell B) have a radius \(b\) (\(b > a\)) and carry a charge \(q_B\).
+        </p>
+        
+        
+
+        <h3>1. Potential of the Inner Shell (\(V_A\))</h3>
+        <p>
+            To find the total potential exactly on the surface of Shell A, we add the contribution from Shell A itself and the contribution from Shell B.
+        </p>
+        <ul>
+            <li>For its own charge \(q_A\), the point is on the surface: \(V_1 = \frac{1}{4\pi\varepsilon_0} \frac{q_A}{a}\)</li>
+            <li>For the outer charge \(q_B\), the point is <em>inside</em> Shell B. The potential everywhere inside Shell B is equal to its surface potential: \(V_2 = \frac{1}{4\pi\varepsilon_0} \frac{q_B}{b}\)</li>
+        </ul>
+        \[V_A = \frac{1}{4\pi\varepsilon_0} \left( \frac{q_A}{a} + \frac{q_B}{b} \right)\]
+
+        <h3>2. Potential of the Outer Shell (\(V_B\))</h3>
+        <p>
+            Now we calculate the total potential exactly on the surface of Shell B.
+        </p>
+        <ul>
+            <li>For the inner charge \(q_A\), the point is <em>outside</em> Shell A at a distance \(b\): \(V_1 = \frac{1}{4\pi\varepsilon_0} \frac{q_A}{b}\)</li>
+            <li>For its own charge \(q_B\), the point is on the surface: \(V_2 = \frac{1}{4\pi\varepsilon_0} \frac{q_B}{b}\)</li>
+        </ul>
+        \[V_B = \frac{1}{4\pi\varepsilon_0} \left( \frac{q_A}{b} + \frac{q_B}{b} \right)\]
+
+        <h3>3. The Potential Difference (\(\Delta V\))</h3>
+        <p>
+            A massive conceptual shortcut for JEE problems arises when we subtract the two equations to find the potential difference between the inner and outer shells:
+        </p>
+        \[V_A - V_B = \frac{q_A}{4\pi\varepsilon_0} \left( \frac{1}{a} - \frac{1}{b} \right)\]
+        <div class="insightbox">
+            <strong>Critical Observation:</strong> The potential difference between two concentric shells depends <strong>exclusively</strong> on the charge of the inner shell (\(q_A\)). It is completely independent of the charge on the outer shell (\(q_B\)). Adding or removing charge from the outer shell changes the absolute potential of both shells by the exact same amount, leaving the difference unchanged.
+        </div>
+    </section>
+
+    <section>
+        <h2>Exceptions and Advanced Manipulations: Earthing (Grounding)</h2>
+        <p>
+            The rules change drastically when a shell is connected to the Earth via a conducting wire. This is the most common "twist" in competitive exam problems.
+        </p>
+        <p>
+            <strong>The Grounding Rule:</strong> The Earth is treated as an infinitely large spherical conductor with a potential of exactly zero. When a shell is grounded, charge will flow between the Earth and the shell until the shell's total electric potential reaches exactly zero (\(V_{\text{shell}} = 0\)).
+        </p>
+        <p>
+            <em>Exception explicitly noted:</em> Earthing a shell does <strong>not</strong> mean its net charge becomes zero. It means its net potential becomes zero.
+        </p>
+
+        
+
+        <h3>Case A: Earthing the Outer Shell (Shell B)</h3>
+        <p>
+            If Shell B is grounded, we set its total potential equation to zero. Let \(q_B'\) be the new induced charge on Shell B.
+        </p>
+        \[V_B = \frac{1}{4\pi\varepsilon_0} \left( \frac{q_A}{b} + \frac{q_B'}{b} \right) = 0\]
+        \[q_B' = -q_A\]
+        <p>
+            The outer shell draws exactly enough charge from the Earth to perfectly cancel the potential created by the inner shell at distance \(b\).
+        </p>
+
+        <h3>Case B: Earthing the Inner Shell (Shell A)</h3>
+        <p>
+            If Shell A is grounded, we set its total potential equation to zero. Let \(q_A'\) be the new induced charge on Shell A.
+        </p>
+        \[V_A = \frac{1}{4\pi\varepsilon_0} \left( \frac{q_A'}{a} + \frac{q_B}{b} \right) = 0\]
+        \[q_A' = -q_B \left( \frac{a}{b} \right)\]
+        <p>
+            Notice that the induced charge is a fraction of the outer charge, opposite in sign. It does not perfectly cancel the outer charge, because the geometric distances (\(a\) and \(b\)) are different.
+        </p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Conductors and Cavities</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Conductors and Cavities</h1>
+    <p class="subtitle">
+        The behavior of free charges in electrostatic equilibrium and the principle of shielding.
+    </p>
+
+    <section>
+        <h2>What is a Conductor in Electrostatic Equilibrium?</h2>
+        <p>
+            Unlike insulators where charges are rigidly locked in place, an ideal <strong>conductor</strong> contains an abundance of free electrons that can move unimpeded through the material's atomic lattice. 
+        </p>
+        <p>
+            <strong>Electrostatic equilibrium</strong> is the state reached when the macroscopic motion of these free charges completely ceases. If an external electric field is applied, or if excess charge is placed on the conductor, the free electrons will instantly redistribute themselves until the net force on every charge within the material becomes exactly zero. 
+        </p>
+        <div class="insightbox">
+            The fundamental defining property of a conductor in electrostatic equilibrium is that the net electric field strictly inside the solid material is everywhere zero (\(\vec{E}_{\text{in}} = 0\)).
+        </div>
+    </section>
+
+    <section>
+        <h2>How do Conductors Behave? (Core Properties)</h2>
+        <p>
+            From the single premise that \(\vec{E}_{\text{in}} = 0\), we can rigorously deduce several critical behaviors using Gauss's Law and the relationship between field and potential.
+        </p>
+
+        <h3>1. Excess Charge Resides on the Surface</h3>
+        <p>
+            If we construct a Gaussian surface entirely within the solid material of the conductor, \(\vec{E} = 0\) everywhere on that surface. Therefore, the electric flux \(\Phi_E\) is zero. By Gauss's Law (\(\oint \vec{E} \cdot d\vec{A} = Q_{\text{enc}} / \varepsilon_0\)), the enclosed net charge must be zero. 
+        </p>
+        <p>
+            Consequently, any net excess charge placed on a conductor must reside entirely on its outer surface. It cannot exist within the bulk volume.
+        </p>
+
+        <h3>2. The Conductor is an Equipotential Volume</h3>
+        <p>
+            Since \(\vec{E} = -\frac{dV}{dr} = 0\) everywhere inside the conductor, the electric potential \(V\) cannot change with position. The entire 3D volume of the conductor, including its surface, is a single equipotential region. It requires zero work to move a test charge from any point inside or on the surface to any other point within or on the conductor.
+        </p>
+
+        <h3>3. Field at the Surface is Perpendicular</h3>
+        <p>
+            Just outside the surface of a conductor, the electric field \(\vec{E}\) must be strictly perpendicular (orthogonal) to the local surface. If a tangential component existed, it would exert a force on the surface charges, causing them to flow and violating the condition of equilibrium.
+        </p>
+
+        <h3>4. Magnitude of the Surface Field</h3>
+        <p>
+            Using a microscopic cylindrical "pillbox" Gaussian surface at the boundary of the conductor, we find that the electric field just outside the surface depends only on the local surface charge density \(\sigma\):
+        </p>
+        \[E_{\text{surface}} = \frac{\sigma}{\varepsilon_0}\]
+        
+        
+
+    </section>
+
+    <section>
+        <h2>How do Cavities in Conductors Work?</h2>
+        <p>
+            A cavity is an empty void completely surrounded by conducting material. Analyzing cavities requires careful application of Gauss's Law.
+        </p>
+
+        <h3>Case 1: Empty Cavity</h3>
+        <p>
+            If a cavity contains no charge, the electric field inside the empty void is exactly zero (\(\vec{E}_{\text{cavity}} = 0\)), regardless of any external electric fields or any excess charge placed on the conductor's outer surface. 
+        </p>
+        <p>
+            This is the principle of <strong>Electrostatic Shielding</strong>. The free electrons in the bulk conductor rearrange themselves perfectly to cancel out any external field, preventing it from penetrating into the cavity.
+        </p>
+        
+        
+
+        <h3>Case 2: Point Charge Inside the Cavity</h3>
+        <p>
+            Suppose we suspend a point charge \(+q\) strictly inside the cavity, insulated from the conducting walls. 
+        </p>
+        <ol>
+            <li>If we draw a Gaussian surface within the solid conducting material enclosing the cavity, \(\vec{E}\) is zero there, so \(Q_{\text{enc}}\) must be zero.</li>
+            <li>To make the net enclosed charge zero, the charge \(+q\) must induce a charge of exactly \(-q\) on the <strong>inner wall</strong> of the cavity.</li>
+            <li>If the conductor is initially neutral, conservation of charge dictates that a charge of exactly \(+q\) must appear on the <strong>outer surface</strong> of the conductor.</li>
+        </ol>
+        <div class="insightbox">
+            The distribution of the induced \(-q\) on the inner wall depends entirely on the exact position of \(+q\) within the cavity. However, the distribution of the \(+q\) on the outer surface depends <strong>only</strong> on the outer geometric shape of the conductor. The outside world knows a charge \(+q\) is inside, but it cannot know its exact location within the cavity.
+        </div>
+        
+        
+
+    </section>
+
+    <section>
+        <h2>Exceptions and Limiting Factors</h2>
+        <p>
+            While the rules of equilibrium are robust, the distribution of charge on irregular shapes presents specific nuances.
+        </p>
+        <ul>
+            <li><strong>Non-Uniform Surface Charge Density:</strong> For an irregularly shaped conductor, the charge does not spread evenly. The surface charge density \(\sigma\) is inversely proportional to the local radius of curvature (\(R_c\)). 
+                \[\sigma \propto \frac{1}{R_c}\]
+            This means sharp points (small \(R_c\)) will have immensely high charge concentrations.</li>
+            <li><strong>Corona Discharge (Action of Points):</strong> As an exception to the idea that a conductor can hold infinite charge, the incredibly high \(\sigma\) at sharp points creates an extreme localized electric field (\(E = \sigma/\varepsilon_0\)). If this field exceeds the dielectric breakdown strength of the surrounding air (approx. \(3 \times 10^6 \text{ V/m}\)), the air ionizes and begins to conduct. Charge "leaks" off the sharp point into the air, a phenomenon utilized in lightning rods.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

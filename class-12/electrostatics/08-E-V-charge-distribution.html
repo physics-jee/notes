@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Charge Distributions (Coulomb World)</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Field and Potential of Charge Distributions</h1>
+    <p class="subtitle">
+        Applying Coulomb's Law and direct integration to continuous macroscopic bodies.
+    </p>
+
+    <section>
+        <h2>What is the Direct Integration Method?</h2>
+        <p>
+            Coulomb's Law strictly applies only to zero-dimensional point charges. However, real-world objects—like wires, rings, and plates—have continuous dimensions. We cannot plug their total charge \(Q\) directly into Coulomb's Law because the distance \(r\) to a test point varies for different parts of the body.
+        </p>
+        <p>
+            The solution lies in calculus. We divide the macroscopic body into an infinite number of infinitesimal elements. Each element contains a tiny charge \(dq\) and is small enough to be treated as a perfect point charge. We calculate the infinitesimal electric field \(d\vec{E}\) or potential \(dV\) created by \(dq\), and then integrate these contributions over the entire geometry of the body.
+        </p>
+        <div class="insightbox">
+            Depending on the object's geometry, the charge element \(dq\) is defined using charge density: <br>
+            Line: \(dq = \lambda \, dl\) <br>
+            Surface: \(dq = \sigma \, dA\) <br>
+            Volume: \(dq = \rho \, dV\)
+        </div>
+    </section>
+
+    <section>
+        <h2>How to Calculate Field and Potential (Standard Cases)</h2>
+        <p>
+            For JEE, mastering the derivations and final results of the following highly symmetric continuous distributions is essential.
+        </p>
+
+        <h3>1. Finite Straight Uniformly Charged Rod</h3>
+        <p>
+            Consider a rod with linear charge density \(\lambda\). We want to find the electric field at a perpendicular distance \(r\) from the rod. The ends of the rod subtend angles \(\theta_1\) and \(\theta_2\) at the observation point.
+        </p>
+        
+        
+
+        <p>
+            Because the rod lacks perfect symmetry, the electric field has two separate components: one perpendicular to the rod (\(E_{\perp}\)) and one parallel to the rod (\(E_{\parallel}\)).
+        </p>
+        \[E_{\perp} = \frac{\lambda}{4\pi\varepsilon_0 r} (\sin\theta_1 + \sin\theta_2)\]
+        \[E_{\parallel} = \frac{\lambda}{4\pi\varepsilon_0 r} (\cos\theta_2 - \cos\theta_1)\]
+        <p>
+            The net electric field is the vector sum of these two components.
+        </p>
+
+        <h3>2. Uniformly Charged Circular Ring (On Axis)</h3>
+        <p>
+            Consider a ring of radius \(R\) carrying a total charge \(Q\). We evaluate the field and potential at a point \(P\) on its central axis, at a distance \(x\) from the center.
+        </p>
+        
+        
+
+        <p>
+            By symmetry, the components of \(d\vec{E}\) perpendicular to the axis completely cancel out. Only the axial components (\(dE \cos\theta\)) survive the integration.
+        </p>
+        \[E_{\text{axis}} = \frac{1}{4\pi\varepsilon_0} \frac{Q x}{(R^2 + x^2)^{3/2}}\]
+        <p>
+            The electric potential is a scalar, so we simply integrate \(dV = \frac{1}{4\pi\varepsilon_0} \frac{dq}{\sqrt{R^2 + x^2}}\) without worrying about vectors:
+        </p>
+        \[V_{\text{axis}} = \frac{1}{4\pi\varepsilon_0} \frac{Q}{\sqrt{R^2 + x^2}}\]
+
+        <h3>3. Uniformly Charged Circular Disc (On Axis)</h3>
+        <p>
+            A disc of radius \(R\) has a uniform surface charge density \(\sigma\). To find the field on its axis, we do not start from point charges; instead, we treat the disc as a collection of concentric infinitesimal rings of radius \(r\) and thickness \(dr\), where \(dq = \sigma (2\pi r \, dr)\).
+        </p>
+
+        
+
+        <p>
+            Integrating the ring formula from \(r = 0\) to \(r = R\) yields:
+        </p>
+        \[E_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( 1 - \frac{x}{\sqrt{R^2 + x^2}} \right)\]
+        \[V_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( \sqrt{R^2 + x^2} - x \right)\]
+    </section>
+
+    <section>
+        <h2>Exceptions and Limiting Cases</h2>
+        <p>
+            The true power of these generalized formulas lies in applying limits to discover the behavior of extreme geometries.
+        </p>
+        <ul>
+            <li><strong>Infinite Straight Wire:</strong> If the rod becomes infinitely long, the subtended angles approach \(\theta_1 = 90^\circ\) and \(\theta_2 = 90^\circ\). The parallel component \(E_{\parallel}\) drops to zero, and the perpendicular component simplifies to \(E = \frac{\lambda}{2\pi\varepsilon_0 r}\).</li>
+            <li><strong>Center of the Ring:</strong> At the exact center of the charged ring (\(x = 0\)), the electric field formula yields \(E = 0\). The vectors pull equally in all directions, creating a null point. However, the potential formula yields \(V = \frac{1}{4\pi\varepsilon_0} \frac{Q}{R}\). <em>Exception highlighted:</em> A zero electric field does not imply a zero electric potential.</li>
+            <li><strong>Ring at Large Distances:</strong> If we move very far away from the ring (\(x \gg R\)), we can approximate \((R^2 + x^2) \approx x^2\). The field formula reduces to \(E = \frac{1}{4\pi\varepsilon_0} \frac{Q}{x^2}\). From far away, the continuous ring is physically indistinguishable from a point charge.</li>
+            <li><strong>Infinite Charged Sheet:</strong> If the radius of the disc approaches infinity (\(R \to \infty\)), or if we observe very close to the disc (\(x \ll R\)), the fraction \(\frac{x}{\sqrt{R^2 + x^2}}\) approaches zero. The field simplifies to the constant \(E = \frac{\sigma}{2\varepsilon_0}\). The field becomes uniform and independent of distance.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Parallel Plate System</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Parallel Plate System and Uniform Fields</h1>
+    <p class="subtitle">
+        Creating perfectly constant electric fields and planar charge distributions.
+    </p>
+
+    <section>
+        <h2>What is a Parallel Plate System?</h2>
+        <p>
+            While point charges and spheres create electric fields that decay with distance (\(1/r^2\)), many experimental and practical applications require an electric field that is perfectly constant in both magnitude and direction everywhere in a given region of space. This is a <strong>Uniform Electric Field</strong>.
+        </p>
+        <p>
+            The simplest way to artificially create a uniform field is using a parallel plate system: two large, flat, parallel conducting plates separated by a small distance \(d\), carrying equal and opposite total charges (\(+Q\) and \(-Q\)).
+        </p>
+        <div class="insightbox">
+            In a uniform field, the field lines are perfectly straight, parallel, and equally spaced. The equipotential surfaces are flat planes strictly perpendicular to the field lines.
+        </div>
+    </section>
+
+    <section>
+        <h2>How do we Calculate the Field and Potential?</h2>
+        <p>
+            We derive the properties of this system using the superposition of the fields created by infinite planar charge sheets. 
+        </p>
+
+        <h3>1. The Electric Field (\(E\))</h3>
+        <p>
+            Recall from Gauss's Law that a single infinite sheet of charge with surface density \(\sigma\) creates a uniform field pointing away from it with magnitude \(E = \frac{\sigma}{2\varepsilon_0}\).
+        </p>
+        <p>
+            In a parallel plate system, the positive plate creates a field pointing <em>away</em> from itself, and the negative plate creates a field pointing <em>towards</em> itself. 
+        </p>
+        <ul>
+            <li><strong>Outside the plates:</strong> The field from the positive plate and the field from the negative plate point in opposite directions. Since their magnitudes are equal (\(\frac{\sigma}{2\varepsilon_0}\)), they perfectly cancel each other out. \(E_{\text{out}} = 0\).</li>
+            <li><strong>Inside the plates:</strong> The fields from both plates point in the exact same direction (from positive to negative). They add constructively.</li>
+        </ul>
+        \[E_{\text{in}} = \frac{\sigma}{2\varepsilon_0} + \frac{\sigma}{2\varepsilon_0} = \frac{\sigma}{\varepsilon_0}\]
+        
+        
+
+        <h3>2. The Potential Difference (\(\Delta V\))</h3>
+        <p>
+            Since the electric field inside the plates is constant, the relationship between field and potential difference (\(E = -\frac{dV}{dr}\)) simplifies to a basic algebraic multiplication over the separation distance \(d\):
+        </p>
+        \[V = E \cdot d = \frac{\sigma d}{\varepsilon_0}\]
+        <p>
+            The potential drops linearly as you move from the positive plate to the negative plate.
+        </p>
+    </section>
+
+    <section>
+        <h2>Exceptions and Advanced JEE Plate Configurations</h2>
+        <p>
+            The ideal mathematical model assumes the plates are infinitely large. Real-world physics and complex JEE problems introduce essential boundary conditions.
+        </p>
+
+        <h3>1. The Edge Effect (Fringing)</h3>
+        <p>
+            The assumption that \(E = \frac{\sigma}{\varepsilon_0}\) is perfectly uniform is strictly valid only near the center of the plates, where the distance \(d\) is much smaller than the distance to the edge.
+        </p>
+        <p>
+            <strong>Exception:</strong> At the physical edges of the plates, the electrostatic repulsion between like charges causes the field lines to bow outward into the surrounding space. This non-uniform curvature is known as the <strong>fringing field</strong>. In standard problems, we explicitly ignore fringing by assuming \(d \ll \text{Area}\).
+        </p>
+        
+        
+
+        <h3>2. Charge Distribution on Multiple Conducting Plates</h3>
+        <p>
+            A classic JEE problem involves placing three or more large conducting plates parallel to each other and giving them arbitrary initial charges (e.g., \(Q_1\), \(Q_2\), \(Q_3\)). How does the charge distribute itself across the numerous facing surfaces?
+        </p>
+        <p>
+            By applying the rule that the net electric field inside the bulk material of any conductor must be zero, we derive two unbreakable rules for planar charge distribution:
+        </p>
+        <ol>
+            <li><strong>Facing Surfaces Rule:</strong> The charge on any two facing surfaces of adjacent plates must be exactly equal and opposite (\(+q\) and \(-q\)).</li>
+            <li><strong>Outermost Surfaces Rule:</strong> The charge on the absolute outermost left surface and the absolute outermost right surface of the entire system must be identical, and is exactly equal to half the sum of the total charge of the entire system.</li>
+        </ol>
+        \[q_{\text{outermost}} = \frac{Q_1 + Q_2 + Q_3 + \dots}{2}\]
+        <div class="insightbox">
+            Once the outermost charges are found, you can easily use the principle of conservation of charge on each individual plate to find the charge on every inner surface step-by-step.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Series and Parallel Combinations | Electric Current and Drift</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Current Electricity
+    </a>
+</nav>
+
+
+<h1>Series and Parallel Combinations</h1>
+<p class="subtitle">
+Structural reduction of linear networks into equivalent black-box parameters.
+</p>
+
+<section>
+<h2>3.1 The Concept of Equivalent Resistance</h2>
+<p>
+The core principle of circuit reduction is replacement without external alteration. If a complex network of resistors is placed inside a "black box" with two emerging terminals, the <strong>Equivalent Resistance (\(R_{eq}\))</strong> is the value of a single resistor that could replace the entire box such that for the same applied potential difference (\(V\)), the exact same total current (\(I\)) is drawn from the source.
+</p>
+</section>
+
+<section>
+<h2>3.2 Series Combination: The Constraint of Charge Conservation</h2>
+<p>
+Resistors are in series if they are connected end-to-end such that there are no branching nodes between them. 
+</p>
+
+<p>
+<strong>The Structural Rule:</strong> Because charge cannot accumulate at any point in a steady-state conductor (Conservation of Charge), the exact same current \(I\) must flow through every resistor.
+</p>
+<div class="model-box">
+    <h3>Derivation via Energy Conservation</h3>
+    <p>The total potential drop across the combination must equal the sum of the individual potential drops (Conservation of Energy):</p>
+    \[V_{\text{total}} = V_1 + V_2 + V_3\]
+    <p>Applying Ohm's Law (\(V = IR\)) to each component:</p>
+    \[I R_{eq} = I R_1 + I R_2 + I R_3\]
+    \[R_{eq} = R_1 + R_2 + R_3\]
+</div>
+<div class="insightbox">
+In series, the equivalent resistance is always strictly greater than the largest individual resistance in the chain. The circuit acts as a voltage divider, where \(V \propto R\).
+</div>
+</section>
+
+<section>
+<h2>3.3 Parallel Combination: The Constraint of Equipotential Nodes</h2>
+<p>
+Resistors are in parallel if all their starting ends are connected to a single common node, and all their terminating ends are connected to another common node.
+</p>
+
+<p>
+<strong>The Structural Rule:</strong> Because the terminals of all resistors share the same two equipotential nodes, the potential difference (\(V\)) across every resistor is strictly identical, regardless of their resistance values.
+</p>
+<div class="model-box">
+    <h3>Derivation via Charge Conservation</h3>
+    <p>The total current entering the primary node must equal the sum of the currents branching into the individual resistors:</p>
+    \[I_{\text{total}} = I_1 + I_2 + I_3\]
+    <p>Applying Ohm's Law (\(I = V/R\)) to each branch:</p>
+    \[\frac{V}{R_{eq}} = \frac{V}{R_1} + \frac{V}{R_2} + \frac{V}{R_3}\]
+    \[\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\]
+</div>
+<div class="insightbox">
+In parallel, the equivalent resistance is always strictly less than the smallest individual resistance in the network. The circuit acts as a current divider, where \(I \propto 1/R\).
+</div>
+</section>
+
+<footer>
+    <hr>
+    <p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatics | Electric Flux and Gauss' Law</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Electrostatics
+        </a>
+    </nav>
+    
+    <h1>Electric Flux and Gauss' Law</h1>
+    <p class="subtitle">
+        The geometric relationship between a closed surface and the charge it encloses.
+    </p>
+
+    <section>
+        <h2>What is Electric Flux?</h2>
+        <p>
+            Before defining Gauss' Law, we must define the mathematical tool it relies upon: <strong>Electric Flux (\(\Phi_E\))</strong>. 
+        </p>
+        <p>
+            Conceptually, electric flux is a measure of the number of electric field lines piercing through a given surface area. Mathematically, it is defined as the scalar product (dot product) of the electric field vector \(\vec{E}\) and the area vector \(\vec{A}\). 
+        </p>
+        <div class="insightbox">
+            <strong>The Area Vector:</strong> In physics, area is treated as a vector. The magnitude of the vector is the surface area itself, and its direction is strictly <em>perpendicular (normal)</em> to the surface. For an open surface, either normal direction is valid. For a closed 3D surface, the area vector \(d\vec{A}\) always points <em>outward</em>.
+        </div>
+        
+        
+
+        <p>
+            For a uniform electric field passing through a flat surface:
+        </p>
+        \[\Phi_E = \vec{E} \cdot \vec{A} = EA \cos\theta\]
+        <p>
+            For a non-uniform field passing through an arbitrary curved surface, we must integrate the flux over infinitesimal area elements \(d\vec{A}\). 
+        </p>
+        \[\Phi_E = \int \vec{E} \cdot d\vec{A}\]
+        <div class="insightbox">
+            <strong>Mathematical Rigor:</strong> Although a single integral sign is often used for brevity in physics texts, the presence of the differential area element \(d\vec{A}\) indicates that this is strictly a <strong>surface integral</strong>. Mathematically, it evaluates as a double integral over two independent surface coordinates (e.g., \(\iint \vec{E} \cdot (dx\,dy\,\hat{k})\)).
+        </div>
+        <p>
+            The SI unit of electric flux is \(\text{N}\cdot\text{m}^2/\text{C}\) or \(\text{V}\cdot\text{m}\).
+        </p>
+    </section>
+
+    <section>
+        <h2>What is Gauss' Law?</h2>
+        <p>
+            Gauss' Law is a fundamental theorem of electrostatics. It states that the total net electric flux passing outward through any hypothetical closed mathematical surface (a <strong>Gaussian Surface</strong>) is exactly equal to \(\frac{1}{\varepsilon_0}\) times the net electric charge strictly enclosed within that surface.
+        </p>
+        <p>
+            Expressed mathematically as a closed surface integral:
+        </p>
+        \[\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}\]
+        
+        
+
+        <p>
+            Here, the circle on the integral sign (\(\oint\)) explicitly dictates that the 2D surface integration must completely enclose a 3D volume, leaving no holes or gaps.
+        </p>
+    </section>
+
+    <section>
+        <h2>How do we apply Gauss' Law? (The Symmetry Method)</h2>
+        <p>
+            Gauss' law provides a powerful alternative to Coulomb's law integration for determining the electric field \(\vec{E}\). However, to extract \(\vec{E}\) from inside the double integral \(\iint \vec{E} \cdot d\vec{A}\), the charge distribution must possess highly uniform symmetry (spherical, cylindrical, or planar).
+        </p>
+        <p>
+            The application strictly follows these steps:
+        </p>
+        <ol>
+            <li><strong>Identify Symmetry:</strong> Determine the direction of the \(\vec{E}\) field based on the geometry of the source charge.</li>
+            <li><strong>Choose a Gaussian Surface:</strong> Construct a closed, imaginary 3D surface through the point where you want to find the field. The surface must be chosen such that at every point on it, \(\vec{E}\) is either:
+                <ul>
+                    <li>Parallel to \(d\vec{A}\) (\(\theta = 0^\circ\)) and constant in magnitude, so \(\oint \vec{E} \cdot d\vec{A} = E \oint dA = E \cdot A_{\text{surface}}\).</li>
+                    <li>Perpendicular to \(d\vec{A}\) (\(\theta = 90^\circ\)), making the flux through that part zero (\(\cos 90^\circ = 0\)).</li>
+                </ul>
+            </li>
+            <li><strong>Calculate Enclosed Charge:</strong> Determine \(Q_{\text{enc}}\) using the relevant charge density (\(\lambda, \sigma, \rho\)).</li>
+            <li><strong>Equate and Solve:</strong> Apply the theorem \(E \cdot A_{\text{surface}} = \frac{Q_{\text{enc}}}{\varepsilon_0}\) to isolate \(E\).</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Crucial Nuances and Exceptions for JEE</h2>
+        <p>
+            Gauss' Law is deceptively simple. In competitive exams, problems often test the boundary conditions and common misunderstandings of the equation.
+        </p>
+        <ul>
+            <li><strong>The Source of the Field:</strong> In the equation, the \(\vec{E}\) on the left side is the <em>net</em> electric field at the surface created by <strong>ALL</strong> charges in the universe, both inside and outside the Gaussian surface. However, the \(Q_{\text{enc}}\) on the right side is strictly <strong>ONLY</strong> the charge inside. External charges alter the local field \(\vec{E}\) at specific points on the surface, but their net contribution to the total flux through the closed surface is exactly zero.</li>
+            <li><strong>Zero Flux vs. Zero Field:</strong> If the net flux through a closed surface is zero (\(\Phi_E = 0\)), it strictly means \(Q_{\text{enc}} = 0\). It <strong>does not</strong> mean that the electric field \(\vec{E}\) on the surface is zero. Conversely, if \(\vec{E} = 0\) everywhere on the surface, then \(\Phi_E\) is zero, and \(Q_{\text{enc}}\) must be zero.</li>
+            <li><strong>"Always True" vs. "Always Useful":</strong> Gauss' Law is a universal truth of electrostatics; it applies to any closed surface of any shape. However, it is only <em>useful</em> for calculating the electric field if the charge distribution has perfect symmetry. You cannot use Gauss' law to find the electric field of a dipole, because you cannot define a surface where \(\vec{E}\) is uniformly constant to pull it out of the integral.</li>
+            <li><strong>Flux is Independent of Size/Shape:</strong> If a point charge \(q\) is enclosed by a sphere of radius \(R\), the flux is \(q/\varepsilon_0\). If the sphere expands to radius \(10R\), or deforms into a cube, the total flux remains exactly \(q/\varepsilon_0\). The geometry of the surface does not change the total number of field lines originating from the enclosed charge.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>
